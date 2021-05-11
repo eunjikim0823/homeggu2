@@ -6,8 +6,8 @@
     <link href="css/Contents.css" rel="stylesheet">
 
 <%
-  //Board data=(Board)request.getAttribute("data");//${data}
-   BoardCommand data=(BoardCommand)request.getAttribute("Content_retrieve");//${data}
+//Board data=(Board)request.getAttribute("data");//${data}
+   CBoardCommand data=(CBoardCommand)request.getAttribute("Content_retrieve");//${data}
   int num=data.getNum();  //${data.num}
   String title=data.getTitle();
   String author=data.getAuthor();
@@ -16,7 +16,6 @@
   String mate = data.getMate();
   String type = data.getType();
   String fileName = data.getFileName();
-
 %>
 
 

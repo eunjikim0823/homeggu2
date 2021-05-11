@@ -21,7 +21,7 @@ public interface BoardDAO{
 	public int getNewNum() throws DataAccessException;
 
 	//2-2.글쓰기
-	public void write(BoardCommand data) throws DataAccessException;
+	public void write(CBoardCommand data) throws DataAccessException;
 		// TODO Auto-generated method stub
 
 
@@ -31,20 +31,20 @@ public interface BoardDAO{
 	public void updateReadcnt(String num) throws DataAccessException;
 
 	//3-2.글 상세보기 -조회수가 증가된 레코드 데이터 담기
-	public BoardCommand retrieve(String num) throws DataAccessException;
+	public CBoardCommand retrieve(String num) throws DataAccessException;
 
 	//3-2.글 상세보기 -조회수가 증가된 레코드 데이터 담기
-	public BoardCommand watch(String num) throws DataAccessException;
+	public CBoardCommand watch(String num) throws DataAccessException;
 
 	//4.글수정하기
-	public void update(BoardCommand data) throws DataAccessException;
+	public void update(CBoardCommand data) throws DataAccessException;
 
 	//5.글삭제하기
 	public void delete(String num) throws DataAccessException;
 
 	//6.검색하기->(String searchName,String searchValue) =>HashMap처리방법
 	//                 따로클래스로 만들어서 불러오는 경우
-	public List search(BoardCommand data) throws DataAccessException;
+	public List search(CBoardCommand data) throws DataAccessException;
 
 	public List getBoardList() throws DataAccessException;
 

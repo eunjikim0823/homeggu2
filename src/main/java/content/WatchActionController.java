@@ -35,7 +35,7 @@ public class WatchActionController{
 		//Board data=dao.retrieve(num);
 	    //추가
 		dao.updateReadcnt(num);//readcnt=readcnt+1
-		BoardCommand data=dao.watch(num);
+		CBoardCommand data=dao.watch(num);
 		//--------------------------------------------
 		ModelAndView mav=new ModelAndView("Content_watch");
 		mav.addObject("Content_watch",data);//request.setAttribute("list",list);

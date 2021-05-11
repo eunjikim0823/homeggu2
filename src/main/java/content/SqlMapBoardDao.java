@@ -33,7 +33,7 @@ public class SqlMapBoardDao extends SqlSessionDaoSupport implements BoardDAO {
 	}
 
 	@Override
-	public void write(BoardCommand data) throws DataAccessException {
+	public void write(CBoardCommand data) throws DataAccessException {
 		// TODO Auto-generated method stub
 		//형식)sqlSession객체명.insert("실행시킬 sql구문의 id",전달할 매개변수명)
 		getSqlSession().insert("write",data);//getter Method를 호출=>각각 저장
@@ -48,24 +48,24 @@ public class SqlMapBoardDao extends SqlSessionDaoSupport implements BoardDAO {
 	}
 
 	@Override
-	public BoardCommand retrieve(String num) throws DataAccessException {
+	public CBoardCommand retrieve(String num) throws DataAccessException {
 		// TODO Auto-generated method stub
 		//형식) sqlSession객체명.selectOne("실행시킬 구문의id",매개변수)
 		//Object ->BoardCommand
-		return (BoardCommand)getSqlSession().selectOne("retrieve",num);
+		return (CBoardCommand)getSqlSession().selectOne("retrieve",num);
 	}
 
 	@Override
-	public BoardCommand watch(String num) throws DataAccessException {
+	public CBoardCommand watch(String num) throws DataAccessException {
 		// TODO Auto-generated method stub
-		return (BoardCommand)getSqlSession().selectOne("watch",num);
+		return (CBoardCommand)getSqlSession().selectOne("watch",num);
 	}
 
 
 
 	//수정하기
 	@Override
-	public void update(BoardCommand data) throws DataAccessException {
+	public void update(CBoardCommand data) throws DataAccessException {
 		// TODO Auto-generated method stub
 		getSqlSession().update("update",data);//#{title},#{content}...
 	}
@@ -80,7 +80,7 @@ public class SqlMapBoardDao extends SqlSessionDaoSupport implements BoardDAO {
 
 	//검색하기
 	@Override
-	public List search(BoardCommand data) throws DataAccessException {
+	public List search(CBoardCommand data) throws DataAccessException {
 		// TODO Auto-generated method stub
 		//selectOne() ->레코드 한개 또는 필드 한개의 자료형을 얻어올때
 		return getSqlSession().selectList("search",data);

@@ -68,23 +68,23 @@
 
 			<%
 			ArrayList getPopList = (ArrayList) request.getAttribute("getPopList");//${list}
-			if (getPopList != null) {//데이터가 존재한다면
-				Iterator iter = getPopList.iterator();
-				while (iter.hasNext()) {//꺼낼 데이터가 존재한다면
-					//Board data=(Board)iter.next();//Object ->(Board)형변환
-					BoardCommand data = (BoardCommand) iter.next();
-					//-------------------------------------------------------
-					int num = data.getNum();
-					String title = data.getTitle();
-					String author = data.getAuthor();
-					String hsize = data.getHsize();
-					String mate = data.getMate();
-					String type = data.getType();
-					//String writeday=data.getDate();//날짜출력 ->10글자뿐만 출력하라
-					String writeday = data.getWriteday();
-					String fileName = data.getFileName();
-					//------------------------------------------------
-					int readcnt = data.getReadcnt();//조회수
+				if (getPopList != null) {//데이터가 존재한다면
+					Iterator iter = getPopList.iterator();
+					while (iter.hasNext()) {//꺼낼 데이터가 존재한다면
+						//Board data=(Board)iter.next();//Object ->(Board)형변환
+						CBoardCommand data = (CBoardCommand) iter.next();
+						//-------------------------------------------------------
+						int num = data.getNum();
+						String title = data.getTitle();
+						String author = data.getAuthor();
+						String hsize = data.getHsize();
+						String mate = data.getMate();
+						String type = data.getType();
+						//String writeday=data.getDate();//날짜출력 ->10글자뿐만 출력하라
+						String writeday = data.getWriteday();
+						String fileName = data.getFileName();
+						//------------------------------------------------
+						int readcnt = data.getReadcnt();//조회수
 			%>
 
 

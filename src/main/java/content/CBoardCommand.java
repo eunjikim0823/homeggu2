@@ -7,7 +7,7 @@ import org.springframework.web.multipart.MultipartFile;
 //                              구성한 클래스(작성자이름,글제목,글내용) 게시물번호,조회수x
 //스프링의 jsp의 action태그처럼 ->입력받은 값을 자동으로 Setter Method를 호출
 
-public class BoardCommand {
+public class CBoardCommand {
 
 	int num;
 	String author,title,content, writeday,pwd;//num,date,readcnt (x)

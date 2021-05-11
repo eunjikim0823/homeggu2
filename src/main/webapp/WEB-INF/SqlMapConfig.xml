@@ -13,7 +13,7 @@
 
 <configuration>
    <typeAliases>
-       <typeAlias type="content.BoardCommand" alias="cboard" />
+       <typeAlias type="content.CBoardCommand" alias="cboard" />
        <typeAlias type="content.Pagination" alias="cpagination" />
 
       <typeAlias type="lee.BoardCommand" alias="board" />

@@ -35,7 +35,7 @@ public class RetrieveActionController{
 		//Board data=dao.retrieve(num);
 	    //추가
 		//dao.updateReadcnt(num);//게시물 조회해서 +1 되니까 수정에서는 제외
-		BoardCommand data=dao.retrieve(num);
+		CBoardCommand data=dao.retrieve(num);
 		//--------------------------------------------
 		ModelAndView mav=new ModelAndView("Content_retrieve");
 		mav.addObject("Content_retrieve",data);//request.setAttribute("list",list);

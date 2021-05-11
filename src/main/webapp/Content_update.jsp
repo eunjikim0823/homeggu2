@@ -7,17 +7,17 @@
 
  <!--  글 상세보기 및 수정  -->
  <%
-  //Board data=(Board)request.getAttribute("data");//${data}
-   BoardCommand data=(BoardCommand)request.getAttribute("Content_update");//${data}
-  int num=data.getNum();  //${data.num}
-  String title=data.getTitle();
-  String author=data.getAuthor();
-  String content=data.getContent();
-  String hsize = data.getHsize();
-  String mate = data.getMate();
-  String type = data.getType();
-  String fileName = data.getFileName();
-%>
+ //Board data=(Board)request.getAttribute("data");//${data}
+    CBoardCommand data=(CBoardCommand)request.getAttribute("Content_update");//${data}
+   int num=data.getNum();  //${data.num}
+   String title=data.getTitle();
+   String author=data.getAuthor();
+   String content=data.getContent();
+   String hsize = data.getHsize();
+   String mate = data.getMate();
+   String type = data.getType();
+   String fileName = data.getFileName();
+ %>
 
 
 	<!-- 글 상세보기 및 수정----------------------------------------------------------->
