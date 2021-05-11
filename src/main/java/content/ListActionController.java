@@ -46,13 +46,13 @@ public class ListActionController {
         pagination.setTotalRecordCount(listCnt);
 
 		//ArrayList list=dao.list();
-		List list=dao.list();
-		List list2=dao.getBoardList2(pagination);
-		System.out.println("ListActionController의 list=>"+list);
+		List clist=dao.list();
+		List clist2=dao.getBoardList2(pagination);
+		System.out.println("ListActionController의 list=>"+clist);
 		//화면에 출력할 list.jsp에 전달할 페이지와 전달할값을 설정
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("Content_list");//이동할 파일명만
-		mav.addObject("Content_list",list);//request.setAttribute("list",list);
+		mav.addObject("Content_list",clist);//request.setAttribute("list",list);
 		// mav.addObject("list2", list2);
 		mav.addObject("pagination", pagination);
 		//${list(키명)}

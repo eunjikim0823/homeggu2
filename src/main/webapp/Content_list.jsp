@@ -66,9 +66,9 @@
 		<hr/>
 
 			<%
-			ArrayList list = (ArrayList) request.getAttribute("Content_list");//${list}
-					if (list != null) {//데이터가 존재한다면
-						Iterator iter = list.iterator();
+			ArrayList clist = (ArrayList) request.getAttribute("Content_list");//${list}
+					if (clist != null) {//데이터가 존재한다면
+						Iterator iter = clist.iterator();
 						while (iter.hasNext()) {//꺼낼 데이터가 존재한다면
 							//Board data=(Board)iter.next();//Object ->(Board)형변환
 							BoardCommand data = (BoardCommand) iter.next();
