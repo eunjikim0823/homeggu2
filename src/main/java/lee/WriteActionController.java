@@ -6,13 +6,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
+import content.BoardCommand;
+import content.BoardDAO;
+
 //AbstractCommandController =>입력을 받아서 자동적으로 Setter Method 호출
 //public class WriteActionController extends AbstractCommandController {
 @Controller
 public class WriteActionController {
       //setCommandClass(BoardCommand command)상속받아서 이미 가지고 있는 상태
-	
-	
+
+
 	@Autowired
       BoardDAO dao;//BoardDAO dao=new BoardDAO();
 	/*
@@ -27,7 +30,7 @@ public class WriteActionController {
 	     request객체 ->post방식으로 요청시 처리(@PostMapping("요청경로"))
 	     @RequestParam("num") String num
 	*/
-	
+
 	@RequestMapping("/write.do")
 	protected ModelAndView test(@RequestParam("title") String title,
 			                                       @RequestParam("author") String author,
@@ -51,7 +54,7 @@ public class WriteActionController {
 		data.setAuthor(author);
 		data.setContent(content);
 		dao.write(data);//data.getWriter() =>#{writer},,,
-		
+
 		return new ModelAndView("redirect:/list.do");
 	}
 

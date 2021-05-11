@@ -33,12 +33,6 @@
                       ref="sqlSessionFactory" />
  </bean>
 
-<!-- 게시판 -->
- <bean id="boardDAO2" class="lee.SqlMapBoardDao">
-     <property name="sqlSessionFactory"
-                      ref="sqlSessionFactory" />
- </bean>
-
 
 
  <!-- 1.글목록보기 -->

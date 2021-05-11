@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.AbstractCommandController;
 
+import content.BoardCommand;
+import content.BoardDAO;
+
 //AbstractCommandController =>입력을 받아서 자동적으로 Setter Method 호출
 //스프링 =>쇼핑물
 @Controller
@@ -27,7 +30,7 @@ BoardDAO dao;//BoardDAO dao=new BoardDAO();
 	protected ModelAndView up(@RequestParam("num") int num,
 			                                     @RequestParam("title") String title,
 			                                     @RequestParam("author") String author,
-			                                     @RequestParam("content") String content) 
+			                                     @RequestParam("content") String content)
                                                       throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("UpdateActionController의 handle()호출됨");
@@ -37,19 +40,19 @@ BoardDAO dao;//BoardDAO dao=new BoardDAO();
 		/* before
 		String num=request.getParameter("num");//where num=4
 		//----------------------------------------------
-		String author=data.getAuthor();//작성자 
+		String author=data.getAuthor();//작성자
 		String title=data.getTitle();
 		String content=data.getContent();
 		*/
 		BoardCommand data=new BoardCommand();
 		//int newNum=dao.getNewNum()+1;
-		
+
 		data.setNum(num);
 		data.setTitle(title);
 		data.setAuthor(author);
 		data.setContent(content);
 	    dao.update(data);
-	    
+
 		//dao.update(num,author, title, content);
 		return new ModelAndView("redirect:/list.do");
 	}

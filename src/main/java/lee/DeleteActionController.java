@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
 
+import content.BoardDAO;
+
 //public class ListAction implements CommandAction {
 //페이지 이동,클래스는 틀리지만 요청해서 처리해주는 메서드 기능은 동일
 @Controller
@@ -18,16 +20,16 @@ public class DeleteActionController {
 
 	@Autowired
 	BoardDAO dao;//BoardDAO dao=new BoardDAO();
-	
+
 	public void setDao(BoardDAO dao) { //<property name="dao"></property>
 		this.dao = dao;
 		System.out.println("setDao()호출됨(dao)=>"+dao);
 	}
     // delete.do?num=4 =>get방식
 	@RequestMapping("/delete.do")
-	public ModelAndView handleRequest(HttpServletRequest request, 
+	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
-		
+
 		System.out.println("DeleteActionController의 handleRequest()호출됨");
 		// TODO Auto-generated method stub
 		String num=request.getParameter("num");

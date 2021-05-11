@@ -11,13 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
 
+import content.BoardCommand;
+import content.BoardDAO;
+
 //public class ListAction implements CommandAction {
 //페이지 이동,클래스는 틀리지만 요청해서 처리해주는 메서드 기능은 동일
 @Controller
 public class RetrieveActionController{
 
 	BoardDAO dao;//BoardDAO dao=new BoardDAO();
-	
+
 	@Required
 	@Autowired
 	public void setDao(BoardDAO dao) { //<property name="dao"></property>
@@ -26,9 +29,9 @@ public class RetrieveActionController{
 	}
     // retrieve.do?num=4 =>get방식
 	@RequestMapping("/retrieve.do")
-	public ModelAndView handleRequest(HttpServletRequest request, 
+	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
-		
+
 		System.out.println("RetrieveActionController의 handleRequest()호출됨");
 		// TODO Auto-generated method stub
 		String num=request.getParameter("num");
