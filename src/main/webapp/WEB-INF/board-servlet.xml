@@ -27,11 +27,18 @@
  -->
  <!-- 0.DB접속(JNDI) -->
 <!--  <bean id="boardDAO" class="lee.BoardDAO" /> -->
-
+<!-- 컨텐츠 -->
  <bean id="boardDAO" class="content.SqlMapBoardDao">
      <property name="sqlSessionFactory"
                       ref="sqlSessionFactory" />
  </bean>
+
+<!-- 게시판 -->
+ <bean id="boardDAO2" class="lee.SqlMapBoardDao">
+     <property name="sqlSessionFactory"
+                      ref="sqlSessionFactory" />
+ </bean>
+
 
 
  <!-- 1.글목록보기 -->
