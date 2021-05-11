@@ -7,48 +7,48 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper>
  <!--1.글목록보기 -->
 
- <select id="clist" resultType="lee.BoardCommand">
+ <select id="list" resultType="lee.BoardCommand">
    select * from springboard order by num desc
  </select>
 
  <!-- 2.글쓰기(게시물 번호 최대값구하기) -->
- <select id="cgetNewNum" resultType="int">
+ <select id="getNewNum" resultType="int">
      select max(num) from springboard
  </select>
 
  <!-- 3.글쓰기 (lee.BoardCommand) #{매개변수명(=멤버변수명)}-->
- <insert id="cwrite" parameterType="lee.BoardCommand">
+ <insert id="write" parameterType="lee.BoardCommand">
      insert into springboard(num,author,title,content,writeday)
      values(#{num},#{author},#{title},#{content},sysdate)
  </insert>
 
  <!-- 4.글상세보기(조회수증가) -->
- <update id="cupdateReadcnt" parameterType="String">
+ <update id="updateReadcnt" parameterType="String">
      update springboard set readcnt=readcnt+1 where num=#{num}
  </update>
 
  <!--5.게시물번호에 해당하는 레코드 한개 얻어오기  -->
- <select id="cretrieve" parameterType="String" resultType="lee.BoardCommand">
+ <select id="retrieve" parameterType="String" resultType="lee.BoardCommand">
       select * from springboard where num=#{num}
  </select>
 
  <!-- 6.글수정하기 -->
- <update id="cupdate" parameterType="lee.BoardCommand">
+ <update id="update" parameterType="lee.BoardCommand">
       update springboard
       set title=#{title},content=#{content},author=#{author}
       where num=#{num}
  </update>
  <!-- 7.글삭제하기 -->
- <delete id="cdelete" parameterType="String" >
+ <delete id="delete" parameterType="String" >
        delete from springboard where num=#{num}
  </delete>
  <!-- 8.검색하기 -->
-  <select id="csearch" resultType="lee.BoardCommand" parameterType="lee.BoardCommand">
+  <select id="search" resultType="lee.BoardCommand" parameterType="lee.BoardCommand">
     select * from springboard where ${searchName} like
      '%${searchValue}%' order by num desc
  </select>
 
- <select id="cgetBoardList" resultType="lee.BoardCommand">
+ <select id="getBoardList" resultType="lee.BoardCommand">
  	select *
         from (
         select row_number() over(order by num desc) as
@@ -58,7 +58,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         )
  </select>
 
- <select id="cgetBoardList2" parameterType="lee.pagination" resultType="lee.BoardCommand">
+ <select id="getBoardList2" parameterType="lee.pagination" resultType="lee.BoardCommand">
  	select *
         from (
         select row_number() over(order by num desc) as
@@ -72,7 +72,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         </if>
  </select>
 
- <select id="cgetBoardTotalCnt" resultType="int">
+ <select id="getBoardTotalCnt" resultType="int">
  	select count(*) from springboard
  </select>
 

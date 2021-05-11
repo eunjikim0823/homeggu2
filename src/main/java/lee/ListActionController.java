@@ -34,7 +34,7 @@ public class ListActionController {
 	@RequestMapping("/list.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
-		System.out.println("ListActionController의 handleRequest()호출됨");
+		System.out.println("범근님 ListActionController의 handleRequest()호출됨");
 
 
 
@@ -49,7 +49,7 @@ public class ListActionController {
 		//ArrayList list=dao.list();
 		List list=dao.list();
 		List list2=dao.getBoardList2(pagination);
-		System.out.println("ListActionController의 list=>"+list);
+		System.out.println("범근님 ListActionController의 list=>"+list);
 		//화면에 출력할 list.jsp에 전달할 페이지와 전달할값을 설정
 		ModelAndView mav=new ModelAndView();
 		mav.setViewName("list");//이동할 파일명만
