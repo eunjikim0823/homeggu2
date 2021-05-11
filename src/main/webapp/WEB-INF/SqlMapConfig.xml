@@ -13,18 +13,16 @@
 
 <configuration>
    <typeAliases>
-       <typeAlias type="content.CBoardCommand" alias="cboard" />
+     <typeAlias type="content.BoardCommand" alias="cboard" />
        <typeAlias type="content.Pagination" alias="cpagination" />
 
-      <typeAlias type="lee.BoardCommand" alias="board" />
-       <typeAlias type="lee.Pagination" alias="pagination" />
+    <!--   <typeAlias type="lee.BoardCommand" alias="board" />
+       <typeAlias type="lee.Pagination" alias="pagination" /> -->
    </typeAliases>
-
-
 
    <mappers>
        <mapper resource="content/CBoard.xml" />
-       <mapper resource="lee/Board.xml" />
+  <!--      <mapper resource="lee/Board.xml" /> -->
        <!--
        <mapper resource="lee/Member.xml" />
        <mapper resource="lee/Sangpum.xml" />

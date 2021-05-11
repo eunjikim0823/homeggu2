@@ -37,7 +37,7 @@ public class SearchActionController {
 
 
 		//--------------after------------------------------------------
-		CBoardCommand data=new CBoardCommand();
+		BoardCommand data=new BoardCommand();
 		data.setSearchName(searchName);//검색분야
 		data.setSearchValue(searchValue);//검색어
 

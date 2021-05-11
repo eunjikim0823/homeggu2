@@ -27,7 +27,7 @@ public class UpdateActionController {
 	//4.BindException =>사용자로부터 값을 입력시 에러발생 ->예외처리 클래스
 	*/
 	@RequestMapping("/Content_update.do")
-	public String updateBoard(CBoardCommand data) throws IOException {
+	public String updateBoard(BoardCommand data) throws IOException {
 
 
 		System.out.println("UpdateActionController의 handle()호출됨");

@@ -72,7 +72,7 @@
 					Iterator iter = getPopList.iterator();
 					while (iter.hasNext()) {//꺼낼 데이터가 존재한다면
 						//Board data=(Board)iter.next();//Object ->(Board)형변환
-						CBoardCommand data = (CBoardCommand) iter.next();
+						BoardCommand data = (BoardCommand) iter.next();
 						//-------------------------------------------------------
 						int num = data.getNum();
 						String title = data.getTitle();

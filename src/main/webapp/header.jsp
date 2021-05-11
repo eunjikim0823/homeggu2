@@ -40,7 +40,6 @@
 					<li class="store"><h2><a href="shopping/index2.html">스토어</a></h2></li>
 			   	</ul>
 			   		 <!--검색창-->
-
 			 	<div class="col-md-4 col-sm-4">
        				<table class="top"width="130" height="40">
             			<tr>

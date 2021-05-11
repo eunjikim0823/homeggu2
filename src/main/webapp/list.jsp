@@ -11,17 +11,17 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 
+<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다;
               어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
                <!-- 자바스크립트 라이브러리 -->
-  
+
 
 <title>자유게시판</title>
 <!-- 부트스트랩 -->
 
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 
-    
+
 <style>
 
 li {
@@ -31,11 +31,11 @@ li {
 table, td, th {
     border: 1px solid black;
 }
- 
+
 th {
     background: #F3F5F5;
 }
- 
+
 table {
     margin-top: 5%;
     margin-left: auto;
@@ -43,18 +43,18 @@ table {
     text-align: center;
     width: 80%;
 }
- 
+
 a:link {
     color: red;
     text-decoration: none;
     cursor: pointer;
 }
- 
+
 a:visited {
     color: black;
     text-decoration: none;
 }
- 
+
 /* paginate */
 .paginate {
     padding: 0;
@@ -64,11 +64,11 @@ a:visited {
     margin: 20px 0 20px 0;
     z-index: 1;
 }
- 
+
 .paginate .paging {
     text-align: center;
 }
- 
+
 .paginate .paging a, .paginate .paging strong {
     margin: 0;
     padding: 0;
@@ -82,13 +82,13 @@ a:visited {
     text-align: center;
     font-size: 12px;
 }
- 
+
 .paginate .paging a:hover, .paginate .paging strong {
     color: #DAA520;
     font-weight: 600;
     font-weight: normal;
 }
- 
+
 .paginate .paging .direction {
     z-index: 3;
     vertical-align: middle;
@@ -98,45 +98,45 @@ a:visited {
     border-radius: 2px;
     width: 28px;
 }
- 
+
 .paginate .paging .direction:hover {
     border: 1px solid #C40639;
 }
- 
+
 .paginate .paging .direction.prev {
     margin-right: 4px;
 }
- 
+
 .paginate .paging .direction.next {
     margin-left: 4px;
     cursor: pointer;
 }
- 
+
 .paginate .paging img {
     vertical-align: middle;
 }
- 
+
 .paginate .right {
     position: absolute;
     top: 0;
     right: 0;
 }
- 
+
 .bottom-left, .bottom-right {
     position: relative;
     z-index: 5;
 }
- 
+
 .paginate ~ .bottom {
     margin-top: -50px;
 }
- 
+
 .bottom select {
     background: transparent;
     color: #aaa;
     cursor: pointer;
 }
- 
+
 /* paginate */
 .paginate {
     padding: 0;
@@ -145,11 +145,11 @@ a:visited {
     position: relative;
     margin: 20px 0 20px 0;
 }
- 
+
 .paginate .paging {
     text-align: center;
 }
- 
+
 .paginate .paging a, .paginate .paging strong {
     margin: 0;
     padding: 0;
@@ -163,36 +163,36 @@ a:visited {
     text-align: center;
     font-size: 14px;
 }
- 
+
 .paginate .paging a:hover, .paginate .paging strong {
     color: #C40639;
     font-weight: 600;
     font-weight: normal;
 }
- 
+
 .paginate .paging .direction {
     z-index: 3;
     vertical-align: middle;
     background-color: none;
     margin: 0 2px;
 }
- 
+
 .paginate .paging .direction:hover {
     background-color: transparent;
 }
- 
+
 .paginate .paging .direction.prev {
     margin-right: 4px;
 }
- 
+
 .paginate .paging .direction.next {
     margin-left: 4px;
 }
- 
+
 .paginate .paging img {
     vertical-align: middle;
 }
- 
+
 .paginate .right {
     position: absolute;
     top: 0;
@@ -203,7 +203,7 @@ a:visited {
                       font-family: 'Hi Melody', cursive;
  }
 </style>
-<!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js 
+<!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js
          IE의 버전이 낮은 경우에는 html5에 대한 태그가 인식X ->인식을 시켜주는 옵션
     -->
 <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
@@ -216,9 +216,9 @@ a:visited {
  </head>
       <br><br><br><br>
          <center>
-         <p class="jb-xx-large">게시판</p>   
+         <p class="jb-xx-large">게시판</p>
          </center>
-        
+
 		<!-- 게시판 리스트  -->
 		<table class="table table-bordered table-hover">
 			<colgroup>
@@ -288,7 +288,7 @@ a:visited {
                 &lt;&lt; </a> <a class="direction prev" href="javascript:void(0);"
                 onclick="movePage(${pagination.currentPage}<c:if test="${pagination.hasPreviousPage == true}">-1</c:if>,${pagination.cntPerPage},${pagination.pageSize});">
                 &lt; </a>
- 
+
             <c:forEach begin="${pagination.firstPage}"
                 end="${pagination.lastPage}" var="idx">
                 <a
@@ -320,7 +320,7 @@ a:visited {
         </div>
     </div>
     <!-- /paginate -->
-		
+
 		<!-- 검색 기능 -->
 		<center>
      <tr><td colspan="5" align="center">
@@ -342,20 +342,20 @@ a:visited {
 function changeSelectBox(currentPage, cntPerPage, pageSize){
     var selectValue = $("#cntSelectBox").children("option:selected").val();
     movePage(currentPage, selectValue, pageSize);
-    
+
 }
- 
+
 //페이지 이동
 function movePage(currentPage, cntPerPage, pageSize){
-    
+
     var url = "${pageContext.request.contextPath}/list.do";
     url = url + "?currentPage="+currentPage;
     url = url + "&cntPerPage="+cntPerPage;
     url = url + "&pageSize="+pageSize;
-    
+
     location.href=url;
 }
- 
+
 </script>
 	<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 	<script

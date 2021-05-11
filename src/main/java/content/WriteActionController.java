@@ -20,7 +20,7 @@ public class WriteActionController {
       BoardDAO dao;//BoardDAO dao=new BoardDAO();
 
 	@RequestMapping("/Content_write.do")
-	public String insertBoard(CBoardCommand data) throws IOException {
+	public String insertBoard(BoardCommand data) throws IOException {
 
 		String fileName=null;
 

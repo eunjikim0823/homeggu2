@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 
-import content.CBoardCommand;
+import content.BoardCommand;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class UpdateActionController4 {
 	BoardDAO dao;//BoardDAO dao=new BoardDAO();
 
 	@Autowired
-	private CBoardCommand command;
+	private BoardCommand command;
 	/*
 	public void setDao(BoardDAO dao) { //<property name="dao"></property>
 		this.dao = dao;
@@ -32,7 +32,7 @@ public class UpdateActionController4 {
 	//4.BindException =>사용자로부터 값을 입력시 에러발생 ->예외처리 클래스
 	*/
 	@RequestMapping("/update.do")
-	public String updateBoard(CBoardCommand data) throws IOException {
+	public String updateBoard(BoardCommand data) throws IOException {
 
 		String oldFileName=data.getFileName(); //oldfile은 data에서 가지고 온 파일명
 /*

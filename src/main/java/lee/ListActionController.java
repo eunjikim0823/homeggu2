@@ -32,20 +32,20 @@ public class ListActionController {
 	// public void test() {}
 
 	@RequestMapping("/list.do")
-	public ModelAndView handleRequest(HttpServletRequest request, 
+	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
 		System.out.println("ListActionController의 handleRequest()호출됨");
 
-		
-		
+
+
 		int currentPage = request.getParameter("currentPage") == null ? 1 : Integer.parseInt(request.getParameter("currentPage"));
 		int cntPerPage = request.getParameter("cntPerPage")  == null ? 10 : Integer.parseInt(request.getParameter("cntPerPage"));
 		int pageSize = request.getParameter("pageSize") == null ? 10 : Integer.parseInt(request.getParameter("pageSize"));
-		
+
 		int listCnt = dao.getBoardTotalCnt();
         Pagination pagination = new Pagination(currentPage, cntPerPage, pageSize);
         pagination.setTotalRecordCount(listCnt);
-        
+
 		//ArrayList list=dao.list();
 		List list=dao.list();
 		List list2=dao.getBoardList2(pagination);
