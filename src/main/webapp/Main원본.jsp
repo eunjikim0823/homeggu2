@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
-<%@ page import="java.util.*,content.*"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-
-    <link href="css/Top_content.css" rel="stylesheet">
     <link href="css/Main_slider.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
      <link href="css/Top_content.css" rel="stylesheet">
@@ -60,30 +54,6 @@
 
 	<!-- 슬라이더 영역 종료 -->
 
-	<%
-			ArrayList clist = (ArrayList) request.getAttribute("Content_list");//${list}
-					if (clist != null) {//데이터가 존재한다면
-						Iterator iter = clist.iterator();
-						while (iter.hasNext()) {//꺼낼 데이터가 존재한다면
-							//Board data=(Board)iter.next();//Object ->(Board)형변환
-							BoardCommand data = (BoardCommand) iter.next();
-							//-------------------------------------------------------
-							int num = data.getNum();
-							String title = data.getTitle();
-							String author = data.getAuthor();
-							String hsize = data.getHsize();
-							String mate = data.getMate();
-							String type = data.getType();
-							//String writeday=data.getDate();//날짜출력 ->10글자뿐만 출력하라
-							String writeday = data.getWriteday();
-							String fileName = data.getFileName();
-
-							//------------------------------------------------
-							int readcnt = data.getReadcnt();//조회수
-
-
-
-			%>
 	<!-- 인기게시물 소개 영역 -------------------------------------------->
 	<div id="top_content">
 		<div class="top_content">
@@ -92,47 +62,94 @@
                      <h3 class="text">이번주의 인기 게시물</h3>
 				</div><!-- "text-box" -->
 			</div>
-		</div><!-- top_content -->
-
-
-
 
 			<div class="top_content_list">
+
 				<div class="row">
-					<div class="col-md-4 col-sm-4">
-						 <article class="content">
-					     	<a href="Content_watch.do?num=<%=num%>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
-					        	 <div class="thumbnail">
-					        	    <img src="picture/upload/<%=fileName%>" height="400" class=" img-rounded img-responsive">
-					       	     </div><!-- thumbnail -->
-					         	 <div class="text">
-					               <%=title%>
-					             </div><!-- text -->
-					       </a>
-
-				            <div class="content_writer">
-				               <%=author%>
-				            </div><!-- content_writer -->
-
-					       <div class="style_tag">
-						       <hr>
-						      <%=hsize%> &nbsp;&nbsp; <%=mate%> &nbsp;&nbsp; <%=type%>
-						       <hr/>
-					       </div><!-- style_tag -->
+				<!-- https://ohou.se/projects/43836/detail?affect_type=ProjectSelfIndex&affect_id=7	 -->
+					<!-- 첫번째 게시물 -->
+					<div class="col-md-6 col-sm-6">
+					    <article class="content">
+					      <a href="http://localhost:8090/boardspring9/Content_watch.do?num=74" >
+					            <div class=top_img>
+					              <img src="picture/인기게시물/이미지3.jpg" alt="" class="img-rounded img-responsive">
+					            </div><!-- top_img -->
+					            <div class="text" >
+					              아날로그한 취향을 가진 마케터의 원룸 아지트
+					            </div><!-- top_text -->
+					            <div class="top_content_writer">
+					                작성자이름
+					                <p>
+					            </div>
+					        </a>
 					    </article><!-- content -->
-					</div><!-- class="col-md-4 col-sm-4" -->
-				</div>
+					</div><!-- class="col-md-6 col-sm-6" -->
 
-			</div>
-		</div><!--id="top_content_list" -->
+					<!-- https://ohou.se/projects/7871/detail?affect_type=ProjectSelfIndex&affect_id=13 -->
+                    <!-- 두번째 게시물 -->
+ 					<div class="col-md-6 col-sm-6">
+					    <article class="content">
+					      <a href="http://localhost:8090/boardspring9/Content_watch.do?num=75" >
+					            <div class=top_img>
+					              <img src="picture/인기게시물/인기게시물2.jpg" alt="" class="img-rounded img-responsive">
+					            </div><!-- top_img -->
+					            <div class="text">
+					               심플하면서도 취향이 드러나는 원룸의 매력
+					            </div><!-- top_text -->
+					            <div class="top_content_writer">
+					                작성자이름
+					                <p>
+					            </div>
+					        </a>
+					    </article><!-- content -->
+					</div><!-- class="col-md-6 col-sm-6" -->
+				</div><!-- row -->
+
+				<div class="row">
+                   	<!--  https://ohou.se/projects/2971/detail?affect_type=ProjectSelfIndex&affect_id=15 -->
+                     <!-- 세번째 게시물 -->
+ 					<div class="col-md-6 col-sm-6">
+					    <article class="content">
+					      <a href="http://localhost:8090/boardspring9/Content_watch.do?num=73" >
+					            <div class=top_img>
+					              <img src="picture/인기게시물/인기게시물3.jpg" alt="" class="img-rounded img-responsive">
+					            </div><!-- top_img -->
+					            <div class="text">
+					              신랑과 내 취향을 모두 담아, 24평 신혼집
+					            </div><!-- top_text -->
+					            <div class="top_content_writer">
+					                작성자이름
 
 
+					            </div>
+					        </a>
+					    </article><!-- content -->
+					</div><!-- class="col-md-6 col-sm-6" -->
+
+          			  <!-- https://ohou.se/projects/3041/detail?affect_type=ProjectSelfIndex&affect_id=28 -->
+                      <!-- 네번째 게시물 -->
+					<div class="col-md-6 col-sm-6">
+					    <article class="content">
+					      <a href="http://localhost:8090/boardspring9/Content_watch.do?num=67" >
+					            <div class=top_img>
+					              <img src="picture/인기게시물/인기게시물4.jpg" alt="" class="img-rounded img-responsive">
+					            </div><!-- top_img -->
+					            <div class="text">
+					            	 24년 된 18평 빌라, 천장을 뜯어봤어요!
+					            </div><!-- top_text -->
+					            <div class="top_content_writer">
+					                작성자이름
+					            </div>
+					        </a>
+					    </article><!-- content -->
+					</div><!-- class="col-md-6 col-sm-6" -->
+				</div><!-- row -->
+			</div><!-- class="top_content_list" -->
+		</div><!-- class="container" -->
+	</div><!-- id="top_content" 종료  -->
 	<!-- 인기게시물 소개 영역 종료  -->
 
-			<%
-					} //end while
-				} //end if
-				%>
+
 
 
 
