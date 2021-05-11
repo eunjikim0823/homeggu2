@@ -23,7 +23,7 @@
 
 
    <mappers>
-       <mapper resource="content/Board.xml" />
+       <mapper resource="content/CBoard.xml" />
        <mapper resource="lee/Board.xml" />
        <!--
        <mapper resource="lee/Member.xml" />
