@@ -2,7 +2,7 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
  "HTTP://mybatis.org/dtd/mybatis-3-config.dtd">
 
-<!-- 
+<!--
     typeAliases =>  type=상위패키지명.하위패키지명... 불러올 클래스명(DTO,VO클래스명)
                             (별칭을 부여할 때 사용하는 태그)
                             alias="별칭명"
@@ -10,16 +10,22 @@
                        해줄때 사용하는 태그정보
                         resource="패키지명/불러올 xml파일명"
  -->
- 
+
 <configuration>
    <typeAliases>
-       <typeAlias type="content.BoardCommand" alias="board" />
-       <typeAlias type="content.Pagination" alias="pagination" />
-   </typeAliases>    
+       <typeAlias type="content.BoardCommand" alias="cboard" />
+       <typeAlias type="content.Pagination" alias="cpagination" />
+
+      <typeAlias type="lee.BoardCommand" alias="board" />
+       <typeAlias type="lee.Pagination" alias="pagination" />
+   </typeAliases>
+
+
 
    <mappers>
        <mapper resource="content/Board.xml" />
-       <!-- 
+       <mapper resource="lee/Board.xml" />
+       <!--
        <mapper resource="lee/Member.xml" />
        <mapper resource="lee/Sangpum.xml" />
        <mapper resource="lee/Maker.xml" />
