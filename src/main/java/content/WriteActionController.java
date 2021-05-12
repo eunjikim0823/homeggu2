@@ -1,8 +1,10 @@
 package content;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+import javax.imageio.ImageIO;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +33,7 @@ public class WriteActionController {
 			MultipartFile uploadFile =data.getUploadFile();
 
 			if (!uploadFile.isEmpty()) {
+
 				String originalFileName = uploadFile.getOriginalFilename();
 				String ext = FilenameUtils.getExtension(originalFileName);	//확장자 구하기
 				//String rename =
@@ -39,8 +42,8 @@ public class WriteActionController {
 				fileName=newNum+".png";
 				uploadFile.transferTo
 				(new File("C:\\Class\\webtest\\4.jsp\\sou2\\boardspring9\\src\\main\\webapp\\picture\\upload\\" + fileName));
+				}
 
-			}
 
 			data.setFileName(fileName);
 			dao.write(data);

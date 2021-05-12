@@ -105,7 +105,7 @@
 
 								<a href="Content_watch.do?num=<%=num%>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
 						         <div class="thumbnail">
-						            <img src="picture/upload/<%=fileName%>" height="400" class=" img-rounded img-responsive">
+						            <img src="picture/upload/<%=fileName%>" onerror="this.src='picture/upload/대표이미지가 없습니다.png'" height="400" weight:"" class=" img-rounded img-responsive">
 						          </div><!-- thumbnail -->
 						          <div class="text">
 						              <%=title%>
