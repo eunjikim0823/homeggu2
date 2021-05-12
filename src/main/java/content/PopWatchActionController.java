@@ -28,15 +28,15 @@ public class PopWatchActionController{
 			                                                  HttpServletResponse response) throws Exception {
 
 		System.out.println("PopWatchActionController의 handleRequest()호출됨");
-		
+
 		String num=request.getParameter("num");
-	
-		dao.updateReadcnt(num);//readcnt=readcnt+1
+
+		dao.updateReadcnt(num);
 		BoardCommand data=dao.watch(num);
-		//--------------------------------------------
+
 		ModelAndView mav=new ModelAndView("PopContent_watch");
-		mav.addObject("PopContent_watch",data);//request.setAttribute("list",list);
-		//${data(키명)}
+		mav.addObject("PopContent_watch",data);
+
 		return mav;//return "/list.jsp"; //viewResolver가 알려줌
 	}
 }

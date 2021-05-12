@@ -7,8 +7,6 @@
     <link href="css/Contents.css" rel="stylesheet"  type="text/css">
 
 <%
-//Board data=(Board)request.getAttribute("data");//${data}
- // BoardCommand data=(BoardCommand)request.getAttribute("Content_watch");//${data}
  BoardCommand data=(BoardCommand)request.getAttribute("PopContent_watch");
  int num=data.getNum();  //${data.num}
   String title=data.getTitle();
