@@ -50,7 +50,7 @@
  <bean name="/getPopList.do" class="content.PopListActionController" />
 
  <bean name="/list.do" class="lee.ListActionController" />
- 
+
  <!-- 2.글쓰기 폼으로 이동 -->
  <bean name="/writeui.do"
    class="org.springframework.web.servlet.mvc.ParameterizableViewController">
@@ -74,7 +74,11 @@
     </property>
  </bean>  -->
 <bean name="/Content_watch.do" class="content.WatchActionController" />
+
+<bean name="/PopContent_watch.do" class="content.PopWatchActionController" />
+
  <bean name="/Content_retrieve.do" class="content.RetrieveActionController" />
+
  <bean name="/retrieve.do" class="lee.RetrieveActionController" />
 <!-- 5.글수정하기 -->
  <!--  <bean name="/update.do" class="lee.UpdateActionController">
