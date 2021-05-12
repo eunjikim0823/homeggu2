@@ -50,6 +50,7 @@
  <bean name="/getPopList.do" class="content.PopListActionController" />
 
  <bean name="/list.do" class="lee.ListActionController" />
+ 
  <!-- 2.글쓰기 폼으로 이동 -->
  <bean name="/writeui.do"
    class="org.springframework.web.servlet.mvc.ParameterizableViewController">
