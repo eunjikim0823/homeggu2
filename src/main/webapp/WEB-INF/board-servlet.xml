@@ -42,8 +42,11 @@
         <ref bean="boardDAO" />
     </property>
  </bean> -->
-<bean name="/Main2.do" class="content.MainActionController" />
+
+ <bean name="/Main.do" class="content.MainActionController" />
+
  <bean name="/Content_list.do" class="content.ListActionController" />
+
  <bean name="/getPopList.do" class="content.PopListActionController" />
 
  <bean name="/list.do" class="lee.ListActionController" />
