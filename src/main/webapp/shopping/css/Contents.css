@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+
+/*서치 및 아이콘 */
+.icon3 {margin-top:6px;}
+
+
+/*게시물 사진 위치 조정*/
+
+#Contents_Board content {padding:10px;}
+
+.row {padding-right:15%; padding-left:15%;}
+
+/* .content {height:400px; weight:30%;} */
+.thumbnail {width:480px; height:480px; margin:20px;}
+
+
+
+ /* textbox 위치조정 */
+
+.text {position:relative; font-family: 'Hi Melody', cursive;
+		  font-size:20px;
+		  text-align: center;}
+
+.text2 {font-family: 'Hi Melody', cursive;
+		  font-size:20px;
+		  text-align: left;
+		  margin-bottom:2px;}
+
+.text3 {font-family: 'Hi Melody', cursive;
+		  font-size:20px;
+		  text-align: right;}
+
+.content_writer  {text-align: center; margin-top:5px; margin-bottom:-10px;}
+
+.style_tag  {text-align: center; color:red; }
+
+
+/* 컨텐츠 상세보기 */
+.contents_write > form {margin-top:10px;}
+
+
+.watch_form-group  {font-family: 'Hi Melody', cursive;}
+
+.watch_writedaty {font-size:18px; color:gray;}
+
+.watch_author {font-size:25px; color:darkgray; font-weight:3px;}
+
+.watch_title {font-size:30px;}
+
+.watch_livingtype {font-family: 'Hi Melody', cursive;
+							  font-size:22px; color:red;}
+
+.watch_content {font-family: 'Hi Melody', cursive;	 font-size:22px;}

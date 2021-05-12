@@ -16,10 +16,12 @@
      <typeAlias type="content.BoardCommand" alias="cboard" />
        <typeAlias type="content.Pagination" alias="cpagination" />
 
+<!-- 별칭은 편리성을 위한 것일 뿐 코딩 작동과 무관 -->
     <!--   <typeAlias type="lee.BoardCommand" alias="board" />
        <typeAlias type="lee.Pagination" alias="pagination" /> -->
    </typeAliases>
 
+<!-- mappers는 의무. mapper가 되야, db자료를 가지고 와서 뿌림 -->
    <mappers>
        <mapper resource="content/CBoard.xml" />
   <!-- 	  <mapper resource="lee/Board.xml" /> -->

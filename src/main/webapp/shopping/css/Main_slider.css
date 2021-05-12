@@ -1,0 +1,15 @@
+
+
+/*메인 슬라이드 그림 설정 */
+
+.slider {width:100%; height: 500px;}
+.slider .ss1 {background: url(../picture/메인사진/이미지3.jpg) no-repeat center center; background-size:cover;}
+.slider .ss2 {background: url(../picture/메인사진/이미지1.jpg) no-repeat center center; background-size:cover;} 
+.slider .ss3 {background: url(../picture/메인사진/메인이미지2.png) no-repeat center center; background-size:cover;} 
+ 
+.slider .swiper-slide {} 
+.slider .swiper-slide h2 {position:relative;font-size: 60px; line-height: 65px; color:#fff; margin-top: 200px;}
+.slider .swiper-slide h2:after {content: ''; width: 100%; height: 1px; background: rgba(255,255,255,0.9) ;position:absolute; left: 0;bottom: -15px;}
+.slider .swiper-slide h2 em {display:block; font-size: 59px; font-weight: 100;}
+.slider .swiper-slide p {font-size: 27px;  color:#fff; padding-top: 35px;  }
+ 
