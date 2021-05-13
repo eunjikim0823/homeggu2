@@ -11,15 +11,15 @@
 		<form action = "Content_write.do" method="post"  enctype="multipart/form-data">
 					 <!-- enctype="multipart/form-data" -->
 
-			<div class="form-group">
 
+			<!-- 제목 그룹 -->
+			<div class="form-group">
 			    <label for="author"><h2>작성자</h2></label>
 			    <input type="text" class="form-control" name="author">
-
 			    <label for="title"><h2>제목</h2></label>
 			    <input type="text" class="form-control" placeholder="제목을 입력해주세요" name ="title">
-
 		  	</div><!-- 제목 그룹 -->
+
 
 			<!-- 거주상황 표기 -->
 		  	<div class="livingtype">
@@ -48,22 +48,21 @@
 			  	</select>
 		  	</div>
 
-		  	<div class="form-group">
 
+
+			<!-- 내용 그룹 -->
+		  	<div class="form-group">
 		  		<label for="content"><h1>내용</h1></label>
 		  		<textarea class="form-control summernote" rows="10" name="content" placeholder="홈꾸와 멋진 집을 공유해주세요"></textarea>
-
 		  	</div><!-- 내용 그룹 -->
 
 
-
 		  	<!-- <input type="button" class="btn btn-warning btn-lg" onclick="delbtn();" value="사진 삭제"> -->
-
 			<!-- <input type="button" class="btn btn-warning btn-lg" value="대표사진 선택"> -->
 
-             대표사진<p>
-             <input name="uploadFile" type="file" ><p>
-			비밀번호 :<input type = password name = pwd size=10 maxlength=10><p>
+             <h4>대표사진</h4>
+             <input name="uploadFile" type="file" class="btn btn-warning btn-lg" ><p>
+			<h4>비밀번호 : <input type = password name = pwd size=10 maxlength=10></h4>
 			<input type="submit" class="btn btn-danger btn-lg" onclick="alert('글쓰기가 완료되었습니다')" value="글쓰기 완료">
 			 <a href="Content_list.do" class="btn btn-danger btn-lg" role="button">글목록</a>
 
