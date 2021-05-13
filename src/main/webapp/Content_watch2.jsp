@@ -31,13 +31,6 @@
 
 
 	<!-- 글 상세보기 및 수정----------------------------------------------------------->
-	<!--커버이미지  -->
-	<div class="cover">
-		<div class="cover_img">
-	 		<img src="picture/upload/<%=fileName%>">
-	 	 </div>
-	</div>
-
 	<div class="row">
 		<div class="contents_write col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1">
 
