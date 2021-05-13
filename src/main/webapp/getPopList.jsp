@@ -90,7 +90,7 @@
 
 			<!-- https://ohou.se/projects/30967/detail	 -->
 
-				<!-- <div class="row"> -->
+				<div class="row">
 						<div class="col-md-4 col-sm-4">
 						    <article class="content">
 
@@ -105,7 +105,7 @@
 
 						     	<a href="PopContent_watch.do?num=<%=num%>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
 						        	 <div class="thumbnail">
-						        	    <img src="picture/upload/<%=fileName%>" onerror="this.src='picture/upload/대표이미지가 없습니다.png'" height="400" height="400" class=" img-rounded img-responsive">
+						        	    <img src="picture/upload/<%=fileName%>"height="400" height="400" class=" img-rounded img-responsive" onerror="this.src='picture/upload/대표이미지가 없습니다.png'">
 						       	     </div><!-- thumbnail -->
 						         	 <div class="text">
 						               <%=title%>
@@ -125,7 +125,7 @@
 						    </article><!-- content -->
 						</div><!-- class="col-md-4 col-sm-4" -->
 
-				<!-- </div>	 -->
+					 </div>
 
 				<%
 				} //end while

@@ -75,8 +75,6 @@
  </bean>  -->
 <bean name="/Content_watch.do" class="content.WatchActionController" />
 
-<bean name="/PopContent_watch.do" class="content.PopWatchActionController" />
-
  <bean name="/Content_retrieve.do" class="content.RetrieveActionController" />
 
  <bean name="/retrieve.do" class="lee.RetrieveActionController" />
