@@ -1,24 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="content.*" %>
-<%@include file ="header.jsp" %>
 
     <!-- css 파일   -->
     <link href="css/Contents.css" rel="stylesheet"  type="text/css">
 
-<%
-//Board data=(Board)request.getAttribute("data");//${data}
- // BoardCommand data=(BoardCommand)request.getAttribute("Content_watch");//${data}
- BoardCommand data=(BoardCommand)request.getAttribute("Content_watch");
- int num=data.getNum();  //${data.num}
-  String title=data.getTitle();
-  String author=data.getAuthor();
-  String content=data.getContent();
-  String hsize = data.getHsize();
-  String mate = data.getMate();
-  String type = data.getType();
-  String writeday = data.getWriteday();
-%>
+
+
+
+
+
+	<!-- header -->
+	<%@include file ="header.jsp" %>
+
+	<%
+	//Board data=(Board)request.getAttribute("data");//${data}
+	 // BoardCommand data=(BoardCommand)request.getAttribute("Content_watch");//${data}
+	 BoardCommand data=(BoardCommand)request.getAttribute("Content_watch");
+	 int num=data.getNum();  //${data.num}
+	  String title=data.getTitle();
+	  String author=data.getAuthor();
+	  String content=data.getContent();
+	  String hsize = data.getHsize();
+	  String mate = data.getMate();
+	  String type = data.getType();
+	  String writeday = data.getWriteday();
+	%>
 
 
 	<!-- 글 상세보기 및 수정----------------------------------------------------------->
@@ -50,6 +57,12 @@
 					<p>
 				</div>
 
+
+				<!-- 사이트와 연관된 아이템 -->
+				<%@include file ="Content_items.jsp" %>
+
+
+
 				<a href="Content_retrieve.do?num=<%= num %>" type="button" class="btn btn-danger btn-sm text-center">글수정하기</a>
 
 			</form>
@@ -57,4 +70,6 @@
     </div>
 
 
-<%@include file ="footer.jsp" %>
+
+	<!-- footer  -->
+	<%@include file ="footer.jsp" %>
