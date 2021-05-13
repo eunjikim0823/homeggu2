@@ -7,11 +7,10 @@
 
 
 
-
-
-
-	<!-- header -->
+	<!-- header ------------------------------->
 	<%@include file ="header.jsp" %>
+
+
 
 	<%
 	//Board data=(Board)request.getAttribute("data");//${data}
@@ -65,16 +64,34 @@
 			  		<label for="content"><p><%= content %></label><p>
 					<p>
 				</div>
-
-
+				<hr>
+				<p>
 				<!-- 컨텐츠 글 보기 하단 부분 -->
 				<div class="text2">
-							    	&nbsp; &nbsp;&nbsp;
-							    	조회수:<%=readcnt%>
-							    </div>
+					<img src="picture/home.png" class="img-rounded img-responsive" width="25" height="25"><p>
+				    	<span style="color:#92B3B7" >조회수 : <%=readcnt%><p></span>
+						<span style="color:gray">작성자 : <%= author %> <p></span>
+						<span style="color:gray">&nbsp; &nbsp;&nbsp;&nbsp;<  <%= title %>  ></span>
+				</div>
+
+
+				<hr>
+				<div>
+
+					<p>
+					<h3>다른 집들이 구경하기</h3><p>
+					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=%EC%A3%BC%ED%83%9D">
+					<button type="button" class="btn btn-outline-danger btn-lg"><%= type %></button>&nbsp; &nbsp;&nbsp; </a>
+					<button type="button" class="btn btn-outline-danger btn-lg"><%= hsize %></button>&nbsp; &nbsp;&nbsp;
+					<button type="button" class="btn btn-outline-danger btn-lg"><%= mate %></button>&nbsp; &nbsp;&nbsp;
+
+				</div>
+				<hr>
 
 				<!-- 사이트와 연관된 아이템 -->
 				<%@include file ="Content_items.jsp" %>
+				<hr>
+
 
 
 				<div class="center-block">
@@ -86,5 +103,5 @@
 
 
 
-	<!-- footer  -->
+	<!-- footer  ------------------------->
 	<%@include file ="footer.jsp" %>

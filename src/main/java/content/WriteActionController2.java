@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 //AbstractCommandController =>입력을 받아서 자동적으로 Setter Method 호출
 //public class WriteActionController extends AbstractCommandController {
 @Controller
-public class WriteActionController {
+public class WriteActionController2 {
       //setCommandClass(BoardCommand command)상속받아서 이미 가지고 있는 상태
 
 	@Autowired
@@ -34,10 +34,6 @@ public class WriteActionController {
 
 			if (!uploadFile.isEmpty()) {
 
-			     int width = 300;
-			     int height = 300;
-
-
 				String originalFileName = uploadFile.getOriginalFilename();
 				String ext = FilenameUtils.getExtension(originalFileName);	//확장자 구하기
 				//String rename =
@@ -45,7 +41,7 @@ public class WriteActionController {
 				//fileName=newNum+"."+ext; //파일이름 게시물번호랑 일치시킴
 				fileName=newNum+".png";
 				uploadFile.transferTo
-				(new File("C:\\Class\\webtest\\4.jsp\\sou2\\boardspring9\\src\\main\\webapp\\picture\\upload\\" + fileName+width+height));
+				(new File("C:\\Class\\webtest\\4.jsp\\sou2\\boardspring9\\src\\main\\webapp\\picture\\upload\\" + fileName));
 				}
 
 
