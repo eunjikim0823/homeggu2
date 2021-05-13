@@ -41,7 +41,7 @@ public class WriteActionController {
 				//fileName=newNum+"."+ext; //파일이름 게시물번호랑 일치시킴
 				fileName=newNum+".png";
 				uploadFile.transferTo
-				(new File("C:\\Class\\webtest\\4.jsp\\sou2\\boardspring9\\src\\main\\webapp\\picture\\upload\\" + fileName));
+				(new File("C:\\Class\\webtest\\4.jsp\\sou2\\boardspring9\\src\\main\\webapp\\picture\\upload2\\" + fileName));
 				}
 
 

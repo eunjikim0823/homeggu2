@@ -59,9 +59,9 @@
 	<div id="top_content">
 		<div class="top_content">
 			<div class="row">
-				 <div class="text-box">
+				 <div class="text-box2">
                      <h3 class="text">이번주의 인기 게시물</h3>
-				</div><!-- "text-box" -->
+				</div>
 			</div>
 
 			<div class="top_content_list">
@@ -79,7 +79,7 @@
 					              아날로그한 취향을 가진 마케터의 원룸 아지트
 					            </div><!-- top_text -->
 					            <div class="top_content_writer">
-					                작성자이름
+
 					                <p>
 					            </div>
 					        </a>
@@ -98,7 +98,7 @@
 					               심플하면서도 취향이 드러나는 원룸의 매력
 					            </div><!-- top_text -->
 					            <div class="top_content_writer">
-					                작성자이름
+
 					                <p>
 					            </div>
 					        </a>
@@ -119,7 +119,7 @@
 					              신랑과 내 취향을 모두 담아, 24평 신혼집
 					            </div><!-- top_text -->
 					            <div class="top_content_writer">
-					                작성자이름
+
 
 
 					            </div>
@@ -139,7 +139,7 @@
 					            	 24년 된 18평 빌라, 천장을 뜯어봤어요!
 					            </div><!-- top_text -->
 					            <div class="top_content_writer">
-					                작성자이름
+
 					            </div>
 					        </a>
 					    </article><!-- content -->
