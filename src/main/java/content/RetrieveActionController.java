@@ -8,12 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
-
-import com.content.dao.BoardCommand;
-import com.content.dao.BoardDAO;
 
 //public class ListAction implements CommandAction {
 //페이지 이동,클래스는 틀리지만 요청해서 처리해주는 메서드 기능은 동일

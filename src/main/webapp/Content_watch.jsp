@@ -76,15 +76,18 @@
 
 
 				<hr>
-				<div>
 
+				<div class="other_home">
 					<p>
 					<h3>다른 집들이 구경하기</h3><p>
-					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=%EC%A3%BC%ED%83%9D">
+					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=<%= type %>">
 					<button type="button" class="btn btn-outline-danger btn-lg"><%= type %></button>&nbsp; &nbsp;&nbsp; </a>
-					<button type="button" class="btn btn-outline-danger btn-lg"><%= hsize %></button>&nbsp; &nbsp;&nbsp;
-					<button type="button" class="btn btn-outline-danger btn-lg"><%= mate %></button>&nbsp; &nbsp;&nbsp;
 
+					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=<%= hsize %>">
+					<button type="button" class="btn btn-outline-danger btn-lg"><%= hsize %></button>&nbsp; &nbsp;&nbsp;</a>
+
+					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=<%= mate %>">
+					<button type="button" class="btn btn-outline-danger btn-lg"><%= mate %></button>&nbsp; &nbsp;&nbsp;</a>
 				</div>
 				<hr>
 
