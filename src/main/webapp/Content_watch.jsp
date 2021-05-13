@@ -86,10 +86,10 @@
 					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=<%= type %>">
 					<button type="button" class="btn btn-outline-danger btn-lg"><%= type %></button>&nbsp; &nbsp;&nbsp; </a>
 
-					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=<%= hsize %>">
+					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=hsize&searchValue=<%= hsize %>">
 					<button type="button" class="btn btn-outline-danger btn-lg"><%= hsize %></button>&nbsp; &nbsp;&nbsp;</a>
 
-					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=type&searchValue=<%= mate %>">
+					<a href="http://localhost:8090/boardspring9/Content_search.do?searchName=mate&searchValue=<%= mate %>">
 					<button type="button" class="btn btn-outline-danger btn-lg"><%= mate %></button>&nbsp; &nbsp;&nbsp;</a>
 				</div>
 				<hr>
