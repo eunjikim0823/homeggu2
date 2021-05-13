@@ -77,9 +77,9 @@
 				<%@include file ="Content_items.jsp" %>
 
 
-
-				<a href="Content_retrieve.do?num=<%= num %>" type="button" class="btn btn-danger btn-sm text-center">글수정하기</a>
-
+				<div class="center-block">
+					<a href="Content_retrieve.do?num=<%= num %>" type="button" class="btn btn-danger btn-sm text-center">글수정하기</a>
+				</div>
 			</form>
     	</div><!--contents_write  ---------------------------------------------------------------------------------------------------------->
     </div>
