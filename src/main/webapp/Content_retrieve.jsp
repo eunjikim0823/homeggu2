@@ -20,7 +20,7 @@
 
 
 
-	<!-- 글 상세보기 및 수정----------------------------------------------------------->
+	<!-- 컨텐츠 수정----------------------------------------------------------->
 	<div class="contents_write col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
 
 		<form action="Content_update.do" method="post" enctype="multipart/form-data" >

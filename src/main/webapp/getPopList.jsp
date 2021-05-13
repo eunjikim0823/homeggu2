@@ -48,7 +48,7 @@
 							    	&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
 							    </div><!-- text -->
 
-						     	<a href="PopContent_watch.do?num=<%=num%>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
+						     	<a href="Content_retrieve.do?num=<%= num %>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
 						        	 <div class="thumbnail">
 						        	    <img src="picture/upload/<%=fileName%>" height="400" height="400" class=" img-rounded img-responsive">
 						       	     </div><!-- thumbnail -->

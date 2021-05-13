@@ -11,7 +11,7 @@
 			<!-- 조회내용 / 검색어 -->
 			<%@include file ="Search.jsp" %>
 
-			<!-- 최신순 조회내역  -->
+			<!-- 최신순 조회내역 /컨텐츠 리스트 default  -->
 			<%
 			ArrayList clist = (ArrayList) request.getAttribute("Content_list");//${list}
 					if (clist != null) {//데이터가 존재한다면
