@@ -153,11 +153,11 @@
             unpackWARs="true" autoDeploy="true">
 
 	<Context docBase="C:\Class\webtest\4.jsp\sou2\boardspring9\src\main\webapp\picture\upload2" path="/homeggu/img" reloadable="true" />
-	이미지 출력 경로 지정/지정해야지 엑박없이 출력됨
-		   실제경로 : "C:\Class\webtest\4.jsp\sou2\boardspring9\src\main\webapp\picture\upload"
+<!-- 	이미지 출력 경로 지정/지정해야지 엑박없이 출력됨
+		   실제경로 : "C:\Class\webtest\4.jsp\sou2\boardspring9\src\main\webapp\picture\upload2"
 		   url 경로 :  "/homeggu/img"
-		   -->
 
+ -->
 
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
