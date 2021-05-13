@@ -19,8 +19,8 @@ public class BoardCommand {
 	MultipartFile uploadFile;
 
 	//DTO와 상관이없지만 MyBatis검색때문에 필요한 클래스때문에 추가
-	String searchName;//검색분야
-	String searchValue;//검색어
+	String searchName;//검색분야 <작성자, 제목, 집사이즈, 가족관계, 타입>
+	String searchValue;//검색어 <해당 내용>
 
 
 
