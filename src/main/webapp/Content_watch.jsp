@@ -33,10 +33,13 @@
 	<!--커버이미지  -->
 	<div class="cover">
 		<div class="cover_img">
-	 		<img src="picture/upload/<%=fileName%>">
+	 		<img src="picture/upload/<%=fileName%>"
+	 			 style="background:no-repeat center center; background-size:cover; width:100%; height: 500px; object-fit: cover;" >
+	 		 <!-- style="width:100%; height:500px;" -->
 	 	 </div>
 	</div>
 
+	<p>
 	<div class="row">
 		<div class="contents_write col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1">
 
@@ -96,10 +99,11 @@
 				<hr>
 
 
-
-				<div class="center-block">
-					<a href="Content_retrieve.do?num=<%= num %>" type="button" class="btn btn-danger btn-sm text-center">글수정하기</a>
+			<div class=row></div>
+				<div class="contents_write col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1">
+					<a href="Content_retrieve.do?num=<%= num %>" type="button" class="btn btn-danger btn-sm float-right">글수정하기</a>
 				</div>
+			</div>
 			</form>
     	</div><!--contents_write  ---------------------------------------------------------------------------------------------------------->
     </div>

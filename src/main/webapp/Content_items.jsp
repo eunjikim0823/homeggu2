@@ -157,9 +157,7 @@
 
 
 				</div><!-- row -->
-			</div><!-- class="top_content_list" -->
-		</div><!-- class="container" -->
-	</div><!-- id="top_content" 종료  -->
+
 	<!-- 인기게시물 소개 영역 종료  -->
 
 
