@@ -114,5 +114,8 @@
 </bean>
 
 
+	<resources mapping="/css/**" location="webapp/css/" />
+	<resources mapping="/picture/**" location="webapp/picture/" />
+	<resources mapping="/js/**" location="webapp/js" />
 
 </beans>
