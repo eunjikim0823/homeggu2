@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="join.*" %>
+<link href="/css/join.css" rel="stylesheet">
 
-<!-- header ------------------------------->
+
+
+
+
+<!-- header-->
 <%@include file ="/header.jsp" %>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-          <link  rel="stylesheet" href="css/join.css" >
+
 <title>회원가입</title>
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		<script src="/resources/js/addressapi.js"></script>

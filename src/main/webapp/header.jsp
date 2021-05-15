@@ -43,8 +43,8 @@
 			 	<div class="col-md-4 col-sm-4">
        				<table class="top"width="130" height="40">
             			<tr>
-            			<td><a href="Join/login.do" class="text-danger">로그인</a></td>
-            			 <td><a href="Join/join.do" class="text-danger">회원가입</a></td>
+            			<td><a href="Join/login.jsp" class="text-danger">로그인</a></td>
+            			 <td><a href="Join/join.jsp" class="text-danger">회원가입</a></td>
             			 </tr>
       				</table>
 
