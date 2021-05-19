@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ page import="java.util.*,lee.*"%>
-<%@ page import="java.util.*,content.*"%>
+<%@ page import="java.util.*,com.lee.*"%>
+<%@ page import="java.util.*,com.content.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@include file ="header.jsp" %>

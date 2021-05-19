@@ -1,4 +1,4 @@
-package lee;
+package com.lee;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.AbstractCommandController;
 
-import content.BoardCommand;
-import content.BoardDAO;
+import com.content.BoardCommand;
+import com.content.BoardDAO;
 
 //AbstractCommandController =>입력을 받아서 자동적으로 Setter Method 호출
 //스프링 =>쇼핑물

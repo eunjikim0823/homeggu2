@@ -1,4 +1,4 @@
-package lee;
+package com.lee;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
 
-import content.BoardCommand;
-import content.BoardDAO;
+import com.content.BoardCommand;
+import com.content.BoardDAO;
 
 //public class ListAction implements CommandAction {
 //페이지 이동,클래스는 틀리지만 요청해서 처리해주는 메서드 기능은 동일

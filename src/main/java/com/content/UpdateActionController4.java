@@ -1,15 +1,14 @@
-package content;
+package com.content;
 
 import java.io.File;
 import java.io.IOException;
-
-
-import content.BoardCommand;
 
 import org.apache.commons.io.FilenameUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.content.BoardCommand;
 
 //AbstractCommandController =>입력을 받아서 자동적으로 Setter Method 호출
 //스프링 =>쇼핑물

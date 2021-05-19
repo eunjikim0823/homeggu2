@@ -1,4 +1,4 @@
-package lee;
+package com.lee;
 
 import java.util.List;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 //import org.springframework.web.servlet.mvc.Controller;
 
-import content.BoardDAO;
-import content.Pagination;
+import com.content.BoardDAO;
+import com.content.Pagination;
 
 //public class ListActionController implements Controller {
 @Controller

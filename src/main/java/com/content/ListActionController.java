@@ -1,4 +1,4 @@
-package content;
+package com.content;
 
 import java.util.List;
 

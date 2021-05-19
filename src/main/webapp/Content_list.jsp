@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@include file ="header.jsp" %>
     <link href="css/Contents.css" rel="stylesheet">
-<%@ page import="java.util.*,content.*"%>
+<%@ page import="java.util.*,com.content.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
