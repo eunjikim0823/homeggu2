@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.lee.*" %>
-<%@ page import="com.content.*"%>
+<%@ page import="lee.*" %>
+<%@ page import="content.*"%>
 <%@include file ="header.jsp" %>
    <%
   //Board data=(Board)request.getAttribute("data");//${data}

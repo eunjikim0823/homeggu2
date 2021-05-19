@@ -1,4 +1,4 @@
-package com.content;
+package content;
 
 public class Pagination {
 

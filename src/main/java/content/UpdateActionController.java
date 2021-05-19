@@ -1,5 +1,5 @@
 
-package com.content;
+package content;
 
 import java.io.IOException;
 

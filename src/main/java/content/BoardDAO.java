@@ -1,5 +1,5 @@
 
-package com.content;
+package content;
 
 import java.util.*; //List,ArrayList ->글목록보기
 //DataAccessException(스프링 전용 예외처리클래스 ->try~catch를 사용x

@@ -15,8 +15,8 @@
 
 <configuration>
    <typeAliases>
-     <typeAlias type="com.content.BoardCommand" alias="Content_board" />
-     <typeAlias type="com.content.Pagination" alias="Content_pagination" />
+     <typeAlias type="content.BoardCommand" alias="ContentBoard" />
+     <typeAlias type="content.Pagination" alias="ContentPagination" />
    </typeAliases>
 
 <!-- mappers는 의무. mapper가 되야, db자료를 가지고 와서 뿌림 -->

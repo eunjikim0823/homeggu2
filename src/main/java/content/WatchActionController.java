@@ -1,4 +1,4 @@
-package com.content;
+package content;
 
 //servlet-api.jar를 없어서 에러 발생 ->jar파일 불러올것
 import javax.servlet.http.HttpServletRequest;
@@ -12,7 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 //페이지 이동,클래스는 틀리지만 요청해서 처리해주는 메서드 기능은 동일
 @Controller
-public class WatchActionController2{
+public class WatchActionController{
 
 	BoardDAO dao;//BoardDAO dao=new BoardDAO();
 
@@ -26,7 +26,7 @@ public class WatchActionController2{
 	@RequestMapping("/Content_watch.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
-		//(value={ "/Content_watch.do", "/PopContent_watch.do" }
+
 		System.out.println("WatchActionController의 handleRequest()호출됨");
 		// TODO Auto-generated method stub
 		String num=request.getParameter("num");

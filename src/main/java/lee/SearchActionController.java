@@ -1,4 +1,4 @@
-package com.lee;
+package lee;
 
 import java.util.List;
 

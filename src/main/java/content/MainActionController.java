@@ -1,4 +1,6 @@
-package com.content;
+package content;
+/*
+package content;
 
 import java.util.List;
 
@@ -13,29 +15,26 @@ import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-//import org.springframework.web.servlet.mvc.Controller;
 
-//public class ListActionController implements Controller {
+
 @Controller
-public class ListActionController {
+public class MainActionController {
 
 	BoardDAO dao;// BoardDAO dao=new BoardDAO();
 
 	@Required
 	@Autowired
-	public void setDao(BoardDAO dao) { // <property name="dao"></property>
+	public void setDao(BoardDAO dao) {
 		this.dao = dao;
+
 	}
-	// list.do
-
-	// public void test() {}
-
-	@RequestMapping("/Content_list.do")
-	public ModelAndView handleRequest(HttpServletRequest request,
-			                                                  HttpServletResponse response) throws Exception {
-		System.out.println("ListActionController의 handleRequest()호출됨");
 
 
+	@RequestMapping("/Main.do")
+		public ModelAndView handleRequest(HttpServletRequest request,
+	            HttpServletResponse response) throws Exception {
+
+		System.out.println("1. MainListActionController의 handleRequest()호출됨");
 
 		int currentPage = request.getParameter("currentPage") == null ? 1 : Integer.parseInt(request.getParameter("currentPage"));
 		int cntPerPage = request.getParameter("cntPerPage")  == null ? 12 : Integer.parseInt(request.getParameter("cntPerPage"));
@@ -45,21 +44,25 @@ public class ListActionController {
         Pagination pagination = new Pagination(currentPage, cntPerPage, pageSize);
         pagination.setTotalRecordCount(listCnt);
 
-		//ArrayList list=dao.list();
-		List clist=dao.list();
-		List clist2=dao.getBoardList2(pagination);
-		System.out.println("ListActionController의 list=>"+clist);
-		//화면에 출력할 list.jsp에 전달할 페이지와 전달할값을 설정
+
+
+		List Main=dao.getPopList();
+		List Main2=dao.getBoardList2(pagination);
+
+		System.out.println("2. MainListActionController의 getPopList=>"+Main);
+
 		ModelAndView mav=new ModelAndView();
-		mav.setViewName("Content_list");//이동할 파일명만
-		mav.addObject("Content_list",clist);//request.setAttribute("list",list);
-		// mav.addObject("list2", list2);
+
+		System.out.println("3. MainListActionController mav=>"+mav);
+
+		mav.setViewName("Main");//이동할 파일명만!!★
+		mav.addObject("Main",Main);//request.setAttribute("list",list);
 		mav.addObject("pagination", pagination);
-		//${list(키명)}
-		return mav;//return "/list.jsp"; //viewResolver가 알려줌
 
+		System.out.println("4. MainListActionController getPopList=>"+Main);
 
-
+		return mav;
 	}
-
 }
+
+*/

@@ -1,4 +1,4 @@
-package com.content;
+package content;
 
 //servlet-api.jar를 없어서 에러 발생 ->jar파일 불러올것
 import javax.servlet.http.HttpServletRequest;
