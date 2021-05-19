@@ -37,7 +37,7 @@
 <bean id="sqlSessionFactory"
         class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="configLocation"
-                         value="WEB-INF/SqlMapConfig.xml" />
+                         value="classpath:config/SqlMapConfig.xml" />
         <property name="dataSource" ref="dataSource" />
 </bean>
 
