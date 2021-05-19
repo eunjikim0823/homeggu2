@@ -48,10 +48,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.or
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
 
-<beans>
+<!-- <beans>
 	<resources mapping="/css/**" location="webapp/css/" />
 	<resources mapping="/picture/**" location="webapp/picture/" />
 	<resources mapping="/js/**" location="webapp/js" />
-</beans>
+</beans> -->
 
 </web-app>
