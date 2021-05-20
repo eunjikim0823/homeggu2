@@ -17,7 +17,7 @@
 
 <body>
     <div id="header">
-       <a href="homegg">  <img src="img/homegg.png" id="logo"> </a>
+       <a href="homegg">  <img src="${pageContext.request.contextPath}/picture/home.png" id="logo"> </a>
        <br>
         <div id="header2"><h4>HommGG</h4></div>
         </div>

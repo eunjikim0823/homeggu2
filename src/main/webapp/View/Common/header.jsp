@@ -38,7 +38,7 @@
 					<li class="icon"><a href="${pageContext.request.contextPath}/View/Content/Main.jsp"><img src="${pageContext.request.contextPath}/picture/home.png" class="img-rounded img-responsive" width="50" height="50"></a></li>
 					<li class="contents"><h2><a href="${pageContext.request.contextPath}/View/Content/Content_list.do">홈꾸집들이 컨텐츠</a></h2></li>
 					<li class="free_board"><h2><a href="${pageContext.request.contextPath}/View/Board/list.do">커뮤니티</a></h2></li>
-					<li class="store"><h2><a href="${pageContext.request.contextPath}/shopping/index2.jsp">스토어</a></h2></li>
+					<li class="store"><h2><a href="${pageContext.request.contextPath}/View/shopping/index2.jsp">스토어</a></h2></li>
 			   	</ul>
 			   		 <!--검색창-->
 			 	<div class="col-md-4 col-sm-4">

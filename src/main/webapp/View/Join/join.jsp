@@ -14,14 +14,13 @@
 
 <title>회원가입</title>
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-		<script src="/resources/js/addressapi.js"></script>
 
 <body>
    <!-- header -->
         <div id="header">
-       <a href="homgg">  <img src="img/homegg.png" id="logo"> </a>
+       <a href="homgg">  <img src="${pageContext.request.contextPath}/picture/home.png" id="logo"> </a>
        <br>
-        <div id="header2"><h4>HommGG</h4></div>
+        <div id="header2"><h4>홈꾸 회원가입</h4></div>
         </div>
 
   <form action="userJoinPro" method="post" role="form" id="usercheck" name="user">
@@ -196,13 +195,6 @@
                 <div class="btn_area">
                     <button type="submit" id="btnJoin">
                         <span>가입하기</span>
-                    </button>
-                </div>
-
-
-                 <div class="btn_area">
-                    <button type="button" id="btnBack">
-                        <span>이전으로</span>
                     </button>
                 </div>
 
