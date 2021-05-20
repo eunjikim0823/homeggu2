@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <!-- css 파일   -->
-     <link href="css/Footer.css" rel="stylesheet">
+     <link href="${pageContext.request.contextPath}/css/Footer.css" rel="stylesheet">
 
 <!--footer영역  --------------------------------------------------------------->
 	 <footer id="footer">
@@ -23,9 +23,9 @@
 			  <div class="col-md-3 col-sm-3" >
 		 		 <ul>
                     <li><b>홈꾸안내<hr></b></a></li>
-                    <li><a href="Footer_info1.jsp">배송비 안내</a></li>
-                    <li><a href="Footer_info2.jsp">교환,반품 방법 안내</a></li>
-                    <li><a href="Footer_info3.jsp">배송상태 및 취소 변경 안내</a></li>
+                    <li><a href="${pageContext.request.contextPath}/common/Footer_info1.jsp">배송비 안내</a></li>
+                    <li><a href="${pageContext.request.contextPath}/common//Footer_info2.jsp">교환,반품 방법 안내</a></li>
+                    <li><a href="${pageContext.request.contextPath}/common//Footer_info3.jsp">배송상태 및 취소 변경 안내</a></li>
                  </ul>
 		 	  </div>	<!-- col-md-3 -->
 		 	  <div class="col-md-3 col-sm-3">
@@ -45,6 +45,6 @@
 		 	  </div>	<!-- col-md-3 -->
 	 		</div><!-- footer_container -->
 	 	</footer> <!-- footer -->
-	
+
   </body>
 </html>

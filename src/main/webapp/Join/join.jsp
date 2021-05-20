@@ -8,7 +8,7 @@
 
 
 <!-- header-->
-<%@include file ="/header.jsp" %>
+<%@include file ="/View/Common/header.jsp" %>
 
 
 
