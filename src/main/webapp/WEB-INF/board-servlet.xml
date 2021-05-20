@@ -68,7 +68,7 @@
 
 <!-- 4. 글상세보기 -->
 
-<bean name="/Content_watch.do" class="content.WatchActionController" />
+<bean name="/Content/Content_watch.do" class="content.WatchActionController" />
 
  <bean name="/Content_retrieve.do" class="content.RetrieveActionController" />
 

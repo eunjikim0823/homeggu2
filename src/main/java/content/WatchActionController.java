@@ -23,7 +23,7 @@ public class WatchActionController{
 		System.out.println("WatchActionController setDao()호출됨(dao)=>"+dao);
 	}
     // retrieve.do?num=4 =>get방식
-	@RequestMapping("/Content_watch.do")
+	@RequestMapping("/Content/Content_watch.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
 

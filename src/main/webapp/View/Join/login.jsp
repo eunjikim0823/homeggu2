@@ -8,8 +8,9 @@
 
 
 
-	<!-- header-->
-	<%@include file ="/header.jsp" %>
+	 <!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
+
 
 
 <title>login</title>
@@ -54,5 +55,6 @@
                     </button>
                 </div>
 
-		<!-- footer-->
-		<%@include file ="/footer.jsp" %>
+
+		<!-- FOOTER -->
+		<%@include file ="/View/Common/footer.jsp" %>

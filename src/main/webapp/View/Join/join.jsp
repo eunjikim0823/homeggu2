@@ -1,21 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="join.*" %>
-<link href="/css/join.css" rel="stylesheet">
+<link href="${pageContext.request.contextPath}/css/join.css" rel="stylesheet">
 
 
 
 
 
-<!-- header-->
-<%@include file ="/header.jsp" %>
+ 	<!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
 
 
 <title>회원가입</title>
 		<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		<script src="/resources/js/addressapi.js"></script>
-</head>
+
 <body>
    <!-- header -->
         <div id="header">
@@ -217,4 +217,6 @@
     <script src="js/join.js"></script>
     </form>
 </body>
-</html>
+
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>

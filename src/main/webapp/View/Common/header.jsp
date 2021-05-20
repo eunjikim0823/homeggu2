@@ -26,8 +26,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
-    <!-- css 파일   -->
-<!--     <link href="css/Header.css" rel="stylesheet">-->
+    <!-- CSS 파일   -->
  	<link rel="stylesheet" href="${pageContext.request.contextPath}/css/Header.css">
 
    <title>홈꾸미기</title>
@@ -36,17 +35,17 @@
 
 	    	<div class="container">
 				<ul class="nav nav-tabs col-md-8 col-sm-8">
-					<li class="icon"><a href="${pageContext.request.contextPath}/Main.jsp"><img src="${pageContext.request.contextPath}/picture/home.png" class="img-rounded img-responsive" width="50" height="50"></a></li>
-					<li class="contents"><h2><a href="${pageContext.request.contextPath}/Content_list.do">홈꾸집들이 컨텐츠</a></h2></li>
-					<li class="free_board"><h2><a href="${pageContext.request.contextPath}/list.do">커뮤니티</a></h2></li>
+					<li class="icon"><a href="${pageContext.request.contextPath}/View/Content/Main.jsp"><img src="${pageContext.request.contextPath}/picture/home.png" class="img-rounded img-responsive" width="50" height="50"></a></li>
+					<li class="contents"><h2><a href="${pageContext.request.contextPath}/View/Content/Content_list.do">홈꾸집들이 컨텐츠</a></h2></li>
+					<li class="free_board"><h2><a href="${pageContext.request.contextPath}/View/Board/list.do">커뮤니티</a></h2></li>
 					<li class="store"><h2><a href="${pageContext.request.contextPath}/shopping/index2.jsp">스토어</a></h2></li>
 			   	</ul>
 			   		 <!--검색창-->
 			 	<div class="col-md-4 col-sm-4">
        				<table class="top"width="130" height="40">
             			<tr>
-            			<td><a href="${pageContext.request.contextPath}/Join/login.jsp" class="text-danger">로그인</a></td>
-            			 <td><a href="${pageContext.request.contextPath}/Join/join.jsp" class="text-danger">회원가입</a></td>
+            			<td><a href="${pageContext.request.contextPath}/View//Join/login.jsp" class="text-danger">로그인</a></td>
+            			 <td><a href="${pageContext.request.contextPath}/View//Join/join.jsp" class="text-danger">회원가입</a></td>
             			 </tr>
       				</table>
 

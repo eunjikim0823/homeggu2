@@ -4,217 +4,17 @@
 <%@ page import="java.util.*,content.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-<%@include file ="header.jsp" %>
-   <link href="css/Contents.css" rel="stylesheet">
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다;
-              어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
-               <!-- 자바스크립트 라이브러리 -->
+ <link href="${pageContext.request.contextPath}/css/BoardList.css" rel="stylesheet">
+
+	 <!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
 
 <title>자유게시판</title>
-<!-- 부트스트랩 -->
-
-<link href="./css/bootstrap.min.css" rel="stylesheet">
 
 
-<style>
-
-li {
-	list-style: none;
-}
-
-table, td, th {
-    border: 1px solid black;
-}
-
-th {
-    background: #F3F5F5;
-}
-
-table {
-    margin-top: 5%;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    width: 80%;
-}
-
-a:link {
-    color: red;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-/* paginate */
-.paginate {
-    padding: 0;
-    line-height: normal;
-    text-align: center;
-    position: relative;
-    margin: 20px 0 20px 0;
-    z-index: 1;
-}
-
-.paginate .paging {
-    text-align: center;
-}
-
-.paginate .paging a, .paginate .paging strong {
-    margin: 0;
-    padding: 0;
-    width: 20px;
-    height: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: #848484;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 12px;
-}
-
-.paginate .paging a:hover, .paginate .paging strong {
-    color: #DAA520;
-    font-weight: 600;
-    font-weight: normal;
-}
-
-.paginate .paging .direction {
-    z-index: 3;
-    vertical-align: middle;
-    background-color: none;
-    margin: 0 2px;
-    border: 1px solid #777;
-    border-radius: 2px;
-    width: 28px;
-}
-
-.paginate .paging .direction:hover {
-    border: 1px solid #C40639;
-}
-
-.paginate .paging .direction.prev {
-    margin-right: 4px;
-}
-
-.paginate .paging .direction.next {
-    margin-left: 4px;
-    cursor: pointer;
-}
-
-.paginate .paging img {
-    vertical-align: middle;
-}
-
-.paginate .right {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
-.bottom-left, .bottom-right {
-    position: relative;
-    z-index: 5;
-}
-
-.paginate ~ .bottom {
-    margin-top: -50px;
-}
-
-.bottom select {
-    background: transparent;
-    color: #aaa;
-    cursor: pointer;
-}
-
-/* paginate */
-.paginate {
-    padding: 0;
-    line-height: normal;
-    text-align: center;
-    position: relative;
-    margin: 20px 0 20px 0;
-}
-
-.paginate .paging {
-    text-align: center;
-}
-
-.paginate .paging a, .paginate .paging strong {
-    margin: 0;
-    padding: 0;
-    width: 20px;
-    height: 28px;
-    line-height: 28px;
-    text-align: center;
-    color: #999;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 14px;
-}
-
-.paginate .paging a:hover, .paginate .paging strong {
-    color: #C40639;
-    font-weight: 600;
-    font-weight: normal;
-}
-
-.paginate .paging .direction {
-    z-index: 3;
-    vertical-align: middle;
-    background-color: none;
-    margin: 0 2px;
-}
-
-.paginate .paging .direction:hover {
-    background-color: transparent;
-}
-
-.paginate .paging .direction.prev {
-    margin-right: 4px;
-}
-
-.paginate .paging .direction.next {
-    margin-left: 4px;
-}
-
-.paginate .paging img {
-    vertical-align: middle;
-}
-
-.paginate .right {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.jb-xx-large { font-size: 60px;
-                      color:#aaa;
-                      font-family: 'Hi Melody', cursive;
- }
-</style>
-<!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js
-         IE의 버전이 낮은 경우에는 html5에 대한 태그가 인식X ->인식을 시켜주는 옵션
-    -->
-<!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
 <body>
- </head>
+
       <br><br><br><br>
          <center>
          <p class="jb-xx-large">게시판</p>
@@ -272,7 +72,7 @@ a:visited {
 
 		<!-- 버튼 -->
 		<div class="text-center">
-			<a href="write.jsp" class="btn btn-primary" role="button">글작성</a>
+			<a href="View/Board/write.do" class="btn btn-primary" role="button">글작성</a>
 			<!--  <a href="update.jsp" class="btn btn-primary" role="button">글수정</a> -->
 			<a href="Delete.html" class="btn btn-primary" role="button"
 				onclick="alert('삭제페이지로 이동합니다')">글삭제</a>
@@ -334,10 +134,10 @@ a:visited {
 		</form>
 	</td></tr>
 	</center>
-		<!--  푸터  -->
-		<%@include file ="footer.jsp" %>
 
-	</div>
+
+
+
 	<script>
 //10,20,30개씩 selectBox 클릭 이벤트
 function changeSelectBox(currentPage, cntPerPage, pageSize){
@@ -364,4 +164,8 @@ function movePage(currentPage, cntPerPage, pageSize){
 	<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
 	<script src="../js/bootstrap.min.js"></script>
 </body>
-</html>
+
+
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>
+
