@@ -1,3 +1,4 @@
 <%
-  response.sendRedirect("http://localhost:8090/boardspring9/Content_list.do");
+  response.sendRedirect(request.getContextPath()+"/Content_list.do");
 %>
+
