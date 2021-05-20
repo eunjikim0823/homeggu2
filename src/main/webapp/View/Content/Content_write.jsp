@@ -1,14 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file ="header.jsp" %>
     <!-- css 파일   -->
-    <link href="css/Contents.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet">
+
+
+
+
+	<!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
 
 	<!-- 글쓰기  ------------------------------------------------------------------------------->
 	<div class="contents_write col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
 
-		<form action = "Content_write.do" method="post"  enctype="multipart/form-data">
+		<form action = "/View/Content/Content_write.do" method="post"  enctype="multipart/form-data">
 					 <!-- enctype="multipart/form-data" -->
 
 
@@ -64,7 +69,7 @@
              <input name="uploadFile" type="file" class="btn btn-warning btn-lg" ><p>
 			<h4>비밀번호 : <input type = password name = pwd size=10 maxlength=10></h4>
 			<input type="submit" class="btn btn-danger btn-lg" onclick="alert('글쓰기가 완료되었습니다')" value="글쓰기 완료">
-			 <a href="Content_list.do" class="btn btn-danger btn-lg" role="button">글목록</a>
+			 <a href="/View/Content/Content_list.do" class="btn btn-danger btn-lg" role="button">글목록</a>
 
 		</form>
     </div><!--contents_write  ---------------------------------------------------------------------------------------------------------->
@@ -91,4 +96,6 @@
     </script>
 
 
-<%@include file ="footer.jsp" %>
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>
+

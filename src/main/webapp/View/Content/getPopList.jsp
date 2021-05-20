@@ -1,14 +1,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@include file ="header.jsp" %>
-    <link href="css/Contents.css" rel="stylesheet">
+
 <%@ page import="java.util.*,content.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
+  <link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet">
+
+
+	 <!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
 			<!-- 조회내용 / 검색어 -->
-			<%@include file ="Search.jsp" %>
+			<%@include file ="/View/Content/Search.jsp" %>
 
 			<!-- 인기순 조회내역  -->
 			<%
@@ -92,4 +96,8 @@
 
 
  -->
-<%@include file ="footer.jsp" %>
+
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>
+	
+	

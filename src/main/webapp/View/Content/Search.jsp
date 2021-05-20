@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="content.*" %>
 
+
 <!--  ======================= -->
 	<nav id="Contents_Board">
 		<div class="row">
@@ -9,8 +10,8 @@
 
  					 <select name="type" class="type"  onchange="window.open(value,'_self');">
 				  		<option selected value hidden class="type">조회기준</option>
-				  		<option value="getPopList.do" class="인기순">인기순</option>
-				  		<option value="Content_list.do" class="최신순">최신순</option>
+				  		<option value="View/Content/getPopList.do" class="인기순">인기순</option>
+				  		<option value="View/Content/Content_list.do" class="최신순">최신순</option>
 				  	</select>
 
 			  <!-- 		<select name="type" class="type">
@@ -42,7 +43,7 @@
 
 
 			<div class="col-md-4 col-sm-6 text-right">
-				<form action="Content_search.do">
+				<form action="View/Content/Content_search.do">
 			   		<select name="searchName" size="1">
 		          		<option value="author">작성자</option>
 		   	      		<option value="title">제목</option>
@@ -57,7 +58,7 @@
 
 				</form>
 
-				 <a href="Content_write.jsp" class="btn btn-danger icon3" role="button">글작성</a>
+				 <a href="View/Content/Content_write.jsp" class="btn btn-danger icon3" role="button">글작성</a>
 			</div><!--col-md-6 col-sm-6-->
 		</div><!--row  -->
 	</nav>

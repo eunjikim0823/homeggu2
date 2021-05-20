@@ -3,13 +3,12 @@
 <%@ page import="content.*" %>
 
     <!-- css 파일   -->
-    <link href="css/Contents.css" rel="stylesheet"  type="text/css">
+    <link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet"  type="text/css">
 
 
 
-	<!-- header ------------------------------->
-	<%@include file ="header.jsp" %>
-
+	<!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
 
 	<%
@@ -33,7 +32,7 @@
 	<!--커버이미지  -->
 	<div class="cover">
 		<div class="cover_img">
-	 		<img src="picture/upload/<%=fileName%>"
+	 		<img src="${pageContext.request.contextPath}/picture/upload/<%=fileName%>"
 	 			 style="background:no-repeat center center; background-size:cover; width:100%; height: 500px; object-fit: cover;" >
 	 		 <!-- style="width:100%; height:500px;" -->
 	 	 </div>
@@ -95,7 +94,7 @@
 				<hr>
 
 				<!-- 사이트와 연관된 아이템 -->
-				<%@include file ="Content_items.jsp" %>
+				<%@include file ="/View/Content/Content_items.jsp" %>
 				<hr>
 
 
@@ -110,5 +109,5 @@
 
 
 
-	<!-- footer  ------------------------->
-	<%@include file ="footer.jsp" %>
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>

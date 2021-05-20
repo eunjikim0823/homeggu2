@@ -3,15 +3,12 @@
 <%@ page import="content.*" %>
 
     <!-- css 파일   -->
-    <link href="css/Contents.css" rel="stylesheet"  type="text/css">
+    <link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet"  type="text/css">
 
 
 
-
-
-
-	<!-- header -->
-	<%@include file ="header.jsp" %>
+	<!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
 	<%
 	//Board data=(Board)request.getAttribute("data");//${data}
@@ -79,5 +76,6 @@
 
 
 
-	<!-- footer  -->
-	<%@include file ="footer.jsp" %>
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>
+

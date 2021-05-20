@@ -1,23 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="content.*" %>
-<%@include file ="header.jsp" %>
     <!-- css 파일   -->
-    <link href="css/Contents.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet">
 
- <!--  글 상세보기 및 수정  -->
- <%
- //Board data=(Board)request.getAttribute("data");//${data}
-    BoardCommand data=(BoardCommand)request.getAttribute("Content_update");//${data}
-   int num=data.getNum();  //${data.num}
-   String title=data.getTitle();
-   String author=data.getAuthor();
-   String content=data.getContent();
-   String hsize = data.getHsize();
-   String mate = data.getMate();
-   String type = data.getType();
-   String fileName = data.getFileName();
- %>
+
+
+	 <!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
+
+
+	 <!--  글 상세보기 및 수정  -->
+	 <%
+	 //Board data=(Board)request.getAttribute("data");//${data}
+	    BoardCommand data=(BoardCommand)request.getAttribute("Content_update");//${data}
+	   int num=data.getNum();  //${data.num}
+	   String title=data.getTitle();
+	   String author=data.getAuthor();
+	   String content=data.getContent();
+	   String hsize = data.getHsize();
+	   String mate = data.getMate();
+	   String type = data.getType();
+	   String fileName = data.getFileName();
+	 %>
 
 
 	<!-- 글 상세보기 및 수정----------------------------------------------------------->
@@ -116,4 +121,8 @@
         height: 400
       });
     </script>
-<%@include file ="footer.jsp" %>
+
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>
+
+

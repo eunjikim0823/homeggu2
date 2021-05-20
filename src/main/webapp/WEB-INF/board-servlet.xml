@@ -49,7 +49,7 @@
 <!--  1.글목록보기 -->
  <bean name="/Main.do" class="content.MainActionController" />
 
- <bean name="/Content_list.do" class="content.ListActionController" />
+ <bean name="/View/Content/Content_list.do" class="content.ListActionController" />
 
  <bean name="/getPopList.do" class="content.PopListActionController" />
 
