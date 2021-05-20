@@ -10,7 +10,7 @@
 	 <%@include file ="/View/Common/header.jsp" %>
 
 			<!-- 조회내용 / 검색어 -->
-			<%@include file ="Search.jsp" %>
+			<%@include file ="/View/Content/Search.jsp" %>
 
 			<!-- 최신순 조회내역 /컨텐츠 리스트 default  -->
 			<%
