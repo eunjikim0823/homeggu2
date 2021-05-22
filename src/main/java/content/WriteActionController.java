@@ -21,7 +21,7 @@ public class WriteActionController {
 	@Autowired
       BoardDAO dao;//BoardDAO dao=new BoardDAO();
 
-	@RequestMapping("/Content_write.do")
+	@RequestMapping("/View/Content/Content_write.do")
 	public String insertBoard(BoardCommand data) throws IOException {
 
 		String fileName=null;
@@ -37,7 +37,6 @@ public class WriteActionController {
 			     int width = 300;
 			     int height = 300;
 
-
 				String originalFileName = uploadFile.getOriginalFilename();
 				String ext = FilenameUtils.getExtension(originalFileName);	//확장자 구하기
 				//String rename =
@@ -51,7 +50,7 @@ public class WriteActionController {
 
 			data.setFileName(fileName);
 			dao.write(data);
-			return "redirect:Content_list.do";
+			return "redirect:View/Content/Content_list.do";
 	}
 }
 

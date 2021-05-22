@@ -10,9 +10,9 @@
 
 
  <!-- 컨트롤러 자동스캔 // 컨트롤러 클래스를 일일이 작성 하지 않아도 된다. -->
-    <context:component-scan base-package="content"/>
+<!--     <context:component-scan base-package="content"/>
   	<context:component-scan base-package="lee"/>
-
+ -->
 
 
 <!-- @Autowired,@Required  -->
@@ -48,7 +48,7 @@
 
 
 <!--  1.글목록보기 -->
-<!--  <bean name="/Main.do" class="content.MainActionController" />
+ <bean name="/Main.do" class="content.MainActionController" />
 
  <bean name="/Content_list.do" class="content.ListActionController" />
 
@@ -56,18 +56,18 @@
 
  <bean name="/list.do" class="lee.ListActionController" />
 
- 2.글쓰기 폼으로 이동
+<!--  2.글쓰기 폼으로 이동 -->
  <bean name="/writeui.do"
    class="org.springframework.web.servlet.mvc.ParameterizableViewController">
       <property name="viewName" value="write" />
    </bean>
 
- 3.글쓰기(글수정하기와 거의유사)
+ <!-- 3.글쓰기(글수정하기와 거의유사) -->
 
  <bean name="/Content_write.do" class="content.WriteActionController" />
  <bean name="/write.do" class="lee.WriteActionController" />
 
-4. 글상세보기
+<!-- 4. 글상세보기 -->
 
 <bean name="/Content/Content_watch.do" class="content.WatchActionController" />
 
@@ -75,23 +75,23 @@
 
  <bean name="/retrieve.do" class="lee.RetrieveActionController" />
 
-5.글수정하기
+<!-- 5.글수정하기 -->
  <bean name="/Content_update.do" class="content.UpdateActionController" />
  <bean name="/update.do" class="lee.UpdateActionController" />
 
- 6.글삭제하기 (목록보기랑 비슷)
+ <!-- 6.글삭제하기 (목록보기랑 비슷) -->
   <bean name="/Content_delete.do" class="content.DeleteActionController" />
   <bean name="/delete.do" class="lee.DeleteActionController" />
 
- 7.글검색하기
+<!--  7.글검색하기 -->
  <bean name="/Content_search.do" class="content.SearchActionController" />
  <bean name="/search.do" class="lee.SearchActionController" />
 
 
-대용량 파일
-순수한 multipartResolver를 사용하기 위해 빈 이름으로 "multipartResolver"를 등록해야함
+<!-- 대용량 파일
+순수한 multipartResolver를 사용하기 위해 빈 이름으로 "multipartResolver"를 등록해야함 -->
 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 	<property name="maxUploadSize" value="100000000"></property>
-</bean> -->
+</bean>
 
 </beans>
