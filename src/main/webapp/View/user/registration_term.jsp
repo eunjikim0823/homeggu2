@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="join.*" %>
-
+ <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
 
  	<!-- HEADER -->
 	 <%@include file ="/View/Common/header.jsp" %>

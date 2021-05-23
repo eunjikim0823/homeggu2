@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="join.*" %>
-
+ <link href="${pageContext.request.contextPath}/css/style.css" rel="stylesheet">
 
  	<!-- HEADER -->
 	 <%@include file ="/View/Common/header.jsp" %>
@@ -48,8 +48,7 @@
                               <input type="text" id="member_phone" name="member_phone" class="form-control" placeholder="전화번호 ex)01012345678" value="${member.member_phone}">
                           	<input type="hidden" id="member_id" name="member_id" value="${sessionScope.loginUser.member_id}">
                           </div>
-                           <p>
-                          <hr>
+
                           <div>
                               <i class="fa fa-phone-square">&ensp;</i><b>주소</b>
                               <input type="text" id="member_address" name="member_address" class="form-control" placeholder="주소 ex)서울시 강남구" value="${member.member_address}">
