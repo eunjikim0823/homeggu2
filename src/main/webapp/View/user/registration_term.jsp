@@ -1,198 +1,82 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-<head>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="join.*" %>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="favicon.ico">
+ 	<!-- HEADER -->
+	 <%@include file ="/View/Common/header.jsp" %>
 
-    <!-- Web Fonts -->
-    <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600&amp;subset=cyrillic,latin'>
 
-    <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/shop.style.css">
-
-    <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/headers/header-default.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/footers/footer-v2.css">
-
-    <!-- CSS Implementing Plugins -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/animate.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/line-icons/line-icons.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/parallax-slider/css/parallax-slider.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/owl-carousel/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/scrollbar/css/jquery.mCustomScrollbar.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/plugins/revolution-slider/rs-plugin/css/settings.css">
-
-    <!-- CSS Customization -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/custom.css">
-
-</head>
 
 <body>
 <div class="wrapper">
-    <!--==========================================
-
-    					Header 상단 시작합니다~!!!!!
-
-    =================================================-->
     <div class="header">
-        <div class="container">
-            <!-- Logo -->
-            <a class="logo" href="${pageContext.request.contextPath}/main.do">
-                <img src="${pageContext.request.contextPath}/assets/logoimg/MainLogo.png" alt="Logo" width="180">
-            </a>
-            <!-- End Logo -->
-
-            <!-- Topbar -->
-            <div class="topbar">
-                <ul class="loginbar pull-right">
-	                <c:choose>
-						<c:when test="${!empty sessionScope.loginAdmin}">
-	                    	<li><a href="#">관리자 페이지</a></li>
-	                    	<li class="topbar-devider"></li>
-	                    	<li><a href="${pageContext.request.contextPath}/user/logout.do">로그아웃</a></li>
-						</c:when>
-
-						<c:when test="${!empty sessionScope.loginCafe}">
-	                    	<li><a href="${pageContext.request.contextPath}/cafe/reservationList.do?cafe_id=${sessionScope.loginCafe.cafe_id}">호스트 센터</a></li>
-	                    	<li class="topbar-devider"></li>
-	                    	<li><a href="${pageContext.request.contextPath}/user/logout.do">로그아웃</a></li>
-						</c:when>
-
-						<c:when test="${!empty sessionScope.loginUser}">
-	                    	<li><a href="${pageContext.request.contextPath}/user/mypage_info.do?member_id=${sessionScope.loginUser.member_id}">마이페이지</a></li>
-	                    	<li class="topbar-devider"></li>
-	                    	<li><a href="${pageContext.request.contextPath}/user/logout.do">로그아웃</a></li>
-						</c:when>
-
-						<c:otherwise>
-	                    	<li><a href="${pageContext.request.contextPath}/user/login.do">로그인</a></li>
-	                    	<li class="topbar-devider"></li>
-	                    	<li><a href="${pageContext.request.contextPath}/user/register.do">회원가입</a></li>
-						</c:otherwise>
-					</c:choose>
-                </ul>
-            </div>
-            <!-- End Topbar -->
-
-            <!-- Toggle get grouped for better mobile display -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="fa fa-bars"></span>
-            </button>
-            <!-- End Toggle -->
-        </div>
-        <!--/end container-->
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse mega-menu navbar-responsive-collapse">
-            <div class="container">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/main.do">Home</a>
-                   </li>
-
-                    <li>
-                        <a href="${pageContext.request.contextPath}/notice/list.do">공지사항</a>
-                    </li>
-
-                    <li>
-                        <a href="${pageContext.request.contextPath}/cafe/list.do">카페 구경하기</a>
-                    </li>
-
-                    <li>
-                        <a href="${pageContext.request.contextPath}/findMember/list.do">멤버 구하기</a>
-                    </li>
-
-                     <li>
-                        <a href="${pageContext.request.contextPath}/help/list.do">도움말</a>
-                    </li>
-
-                    <li>
-                   	  	<c:choose>
-							<c:when test="${!empty sessionScope.loginCafe}">
-								<a href="${pageContext.request.contextPath}/cafe/reservationList.do?cafe_id=${sessionScope.loginCafe.cafe_id}">호스트 센터</a>
-							</c:when>
-
-							<c:when test="${!empty sessionScope.loginUser}"></c:when>
-							<c:when test="${!empty sessionScope.loginAdmin}"></c:when>
-
-							<c:otherwise>
-								<a href="${pageContext.request.contextPath}/cafe/login.do">호스트 센터</a>
-							</c:otherwise>
-						</c:choose>
-                    </li>
-                </ul>
-            </div><!--/end container-->
-        </div><!--/navbar-collapse-->
-    </div>
-    <!--=============================================
-
-    								End Header 상단 끝입니다.!!!
-
-    ================================================-->
+	       <a href="homgg">  <img src="${pageContext.request.contextPath}/picture/home.png" id="logo"> </a>
+	       <br>
+	        <div id="header2"><h4>홈꾸 회원가입</h4></div>
+	 </div>
 
     <!--=== Content Part ===-->
     <div class="container content">
     	<div class="row-fluid privacy">
     		<div class="col-md-10 col-md-offset-1">
-	            <h4>제 1 조 (목적)</h4>
-	            <p>이 약관은 GatherStudy("회사")가 제공하는 GatherStudy 온라인 서비스(이하 “서비스”라고 합니다.)의 이용과 관련하여 회사와 회원과의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
+    		 	<h4>홈꾸미기 서비스 이용 약관</h4>
 
-				<br>
-	            <h4>제 2 조 (정의)</h4>
-	            <p>이 약관에서 사용하는 용어의 정의는 다음과 같습니다.</p>
-	           	<p>1. "서비스"라 함은 유휴 공간(이하 “공간”) 정보의 공유 및 예약을 위하여 “회사”가 스페이스클라우드를 통해 제공하는 온라인 서비스를 말합니다.</p>
-	           	<p>2. “사이트”라 함은 “회사” 가 “서비스”를 운영하는 웹사이트를 의미하며, 현재는 (https://GatherStudy.kr) 입니다.</p>
-	           	<p>3. 회사의 "서비스"에 접속하여 이 약관에 따라 "회사"와 이용계약을 체결하고 "회사"가 제공하는 "서비스"를 이용하는 고객은 서비스 이용목적에 따라 “게스트회원”과 “호스트회원”으로 구분됩니다.</p>
-	           	<p>4. "아이디"라 함은 "회원"의 식별과 "서비스" 이용을 위하여 "회원"이 정한 온라인 아이디를 말합니다.</p>
-	           	<p>5. "비밀번호"라 함은 "회원"이 부여 받은 "아이디”와 일치되는 "회원"임을 확인하고 비밀을 보호하기 위해 "회원" 자신이 정한 온라인 비밀번호를 말합니다.</p>
-	           	<p>6. "게시물"이라 함은 "회원"이 "서비스"를 이용함에 있어 "서비스”에 게시한 부호ㆍ문자ㆍ음성ㆍ음향ㆍ화상ㆍ동영상 등의 정보 형태의 글, 사진, 동영상 및 각종 파일과 링크 등을 말하며, "회원"이 “서비스”를 통해 이용한 “공간”의 이용후기를 포함합니다.</p>
-	           	<p>7. “호스트센터”는 “호스트”를 대상으로 제공하는 공간등록 및 관리 페이지를 말합니다.</p>
+				<b><p>제 1조 (목적)</p></b>
+				<p>홈꾸미기 서비스 이용약관(이하 “약관”이라 합니다)은 주식회사 버킷플레이스(이하 “회사”라 합니다)가 제공하는 서비스와
+				관련하여 회사와 이용 고객(또는 회원) 간에 서비스의 이용 조건 및 절차, 회사와 회원 간의 권리, 의무 및 책임 사항 기타 필요한 사항을 규정함을 목적으로 합니다.</p>
 
-	            <br>
-	            <h4>제 3 조 (약관의 게시와 개정)</p>
-	           	<p>1. "회사"는 이 약관의 내용을 "회원"이 쉽게 알 수 있도록 “서비스” 초기 화면에 게시합니다.</p>
-	           	<p>2. "회사"는 "약관의 규제에 관한 법률", "정보통신망 이용촉진 및 정보보호등에 관한 법률(이하 "정보통신망법")" 등 관련 법령을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.</p>
-	           	<p>3. "회사"가 이 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행약관과 함께 제1항의 방식에 따라 그 개정약관의 적용일자 7일 전부터 적용일자 전일까지 공지합니다. 다만 “회원”에게 불리한 개정인 경우 30일 전부터 적용일자 전일까지 변경 사항을 공지하며, 공지 외에도 “회원”이 등록한 전자우편, “서비스” 로그인 시 동의창 등의 전자적 수단을 통해 따로 명확히 통지합니다.</p>
-	           	<p>4. “회사”가 전항에 따라 개정약관을 공지 또는 통지하면서 “회원”에게 개정약관의 공지기간 내에 거부의 의사표시를 하지 않으면 승낙의 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 “회원”이 명시적으로 거부의 의사표시를 하지 아니한 경우 “회원”이 개정약관에 동의한 것으로 봅니다.</p>
-	           	<p>5. “회원”이 개정약관의 적용에 동의하지 않는 경우 “회사”는 개정약관의 내용을 적용할 수 없으며, 이 경우 “회원”은 이용계약을 해지할 수 있습니다. 다만, 기존약관을 적용할 수 없는 특별한 사정이 있는 경우에는 “회사”는 이용계약을 해지할 수 있습니다.</p>
+				<b><p>제 2조 (용어)</p></b>
+				<p>본 약관에서 사용하는 용어의 정의는 다음 각 호와 같으며, 정의되지 않은 용어에 대한 해석은 관계법령 및 서비스별 안내에서 정하는 바에 따릅니다.</p>
+				<p>1. 홈꾸미기 서비스(이하 “서비스”라 합니다): 이용 고객 또는 회원이 PC, 휴대형 단말기, 태블릿PC 등 각종 유무선 기기 또는 프로그램을 통하여 이용할 수 있도록 회사가 제공하는 인테리어 관련 컨텐츠 및 전문가 큐레이션 서비스, SNS 및 그 외 관련된 서비스를 말합니다.</p>
+				<p>2. 회원: 회사의 서비스에 접속하여 본 약관에 동의하고 ID와 PASSWORD를 발급 받았으며 회사가 제공하는 서비스를 이용하는 고객을 포괄적으로 의미합니다.</p>
+				<p>3. 전문가: 인테리어 관련 서비스나 제품을 판매하는 직종에 종사하는 회원 중 회사가 지정한 절차 및 검수를 마치고 해당 회원의 서비스와 제품에 대한 정보 및 상담을 제공할 수 있는 회원을 의미합니다. 본 약관에서 별도로 전문가를 언급하지 않는 경우에는 모든 약관의 조항들이 전문가에게도 회원과 동일하게 적용됩니다.</p>
+				<p>4. 회원정보: 회사가 가입신청자에게 회원가입 신청양식(이하 “신청양식"이라 합니다)에 기재를 요청하는 가입신청자의 개인정보와 회원의 식별과 서비스 이용을 위하여 회원이 입력하고 서비스 내 공개된 개인정보를 의미합니다.</p>
+				<p>5. 전문가 정보: 전문가가 되기 위해 회사가 지정한 절차 및 검수 과정에서 기재하는 전문가의 정보를 의미합니다.</p>
+				<p>6. ID(고유번호): 회원 식별과 회원의 본 서비스 이용을 위하여 회원이 선정하고 회사가 승인하는 문자와 숫자의 조합을 말합니다. 본 서비스에서는 E-mail 주소를 ID로 사용합니다.</p>
+				<p>7. PASSWORD(비밀번호): 회원의 정보 보호를 위해 회원 자신이 설정한 문자와 숫자의 조합을 말합니다.</p>
+				<p>8. 게시물: 회원이 회사가 제공하는 서비스에 게시 또는 등록하는 부호(URL 포함), 문자, 음성, 음향, 영상(동영상 포함), 이미지(사진 포함), 파일 등 일체의 정보를 말합니다.</p>
 
-				<br>
-	            <h4>제 4 조 (약관의 해석)</h4>
-	            <p>1. "회사"는 “공간”의 이용 및 예약, 취소, 환불 등에 관한 구체적인 사항을 별도의 이용정책으로 둘 수 있습니다.</p>
-	            <p>2. 이 약관 또는 이용정책에서 정하지 아니한 사항이나 해석에 관하여는 관련 법령 또는 상관례에 따릅니다.</p>
+				<b><p>제3조 (약관의 효력 및 변경)</p></b>
+				<p>① 본 약관은 회원이 쉽게 알 수 있도록 서비스 내 또는 연결화면을 통하여 게시하거나 기타의 방법으로 회원에게 공지함으로써 효력이 발생합니다.</p>
+				<p>② 회사는 약관의 규제에 관한 법률, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관계법령에 위배되지 않는 범위 내에서 본 약관을 개정할 수 있습니다.</p>
+				<p>③ 회사는 약관을 개정할 경우 그 개정이유 및 적용일자를 명시하여 현행 약관과 함께 적용일자 7일전부터 적용일 전일까지 제1항의 방법으로 공지합니다. 다만, 회원의 권리 또는 의무에 관한 중요한 규정의 변경은 최소한 30일전에 공지하고 개정약관을 회원이 등록한 E-mail로 발송하여 통지합니다.</p>
+				<p>④ 회사가 제3항에 따라 개정약관을 공지 또는 통지하였음에도 불구하고 회원이 명시적으로 거부의사를 표시하지 아니하는 경우 회원이 개정약관에 동의한 것으로 봅니다.</p>
+				<p>⑤ 회원은 변경된 약관에 동의하지 아니하는 경우 서비스의 이용을 중단하고 이용계약을 해지할 수 있습니다.</p>
+				<p>⑥ 본 약관에 동의하는 것은 서비스를 정기적으로 방문하여 약관의 변경사항을 확인하는 것에 동의함을 의미합니다. 변경된 약관에 대한 정보를 알지 못하여 발생하는 회원의 피해에 대하여 회사는 책임을 지지 않습니다.</p>
 
-	 			<br>
-	            <h4>제 5 조 (이용계약 체결)</h4>
-	            <p>1. 이용계약은 "회원"이 되고자 하는 자(이하 "회원가입신청자")가 이 약관의 내용에 대하여 동의를 한 다음 회원가입신청을 하고 "회사"가 이러한 신청에 대하여 승낙함으로써 체결됩니다. “회사”는 이용계약이 체결되면 “회원”의 성명, 연락처, 전자우편주소를 제공받아 보관하며, “서비스” 제공 목적 범위 내에서 이를 “호스트회원”에게 제공할 수 있습니다.</p>
-	            <p>2. "회사"는 "회원가입신청자"의 신청에 대하여 "서비스" 이용을 승낙할 수 있습니다. 다만, "회사"는 다음 각 호에 해당하는 신청에 대하여는 승낙을 하지 않거나 사후에 이용계약을 해지할 수 있습니다.</p>
-	            <p>3. 제1항에 따른 회원가입신청에 있어 "회사"는 전문기관을 통한 실명확인 및 본인인증을 요청할 수 있습니다.</p>
-	            <p>4. "회사"는 “서비스” 관련 설비의 여유가 없거나, 기술상 또는 업무상 문제가 있는 경우에는 승낙을 유보할 수 있습니다.</p>
-	            <p>5. 제2항과 제4항에 따라 회원가입신청의 승낙을 하지 아니하거나 유보한 경우, "회사"는 원칙적으로 이를 가입신청자에게 알리도록 합니다.</p>
+			    <b><p>제4조 (약관 외 준칙)</p></b>
+				<p>본 약관에 명시되지 않은 사항에 대해서는 정보통신망 이용촉진 및 정보보호 등에 관한 법률, 약관의 규제에 관한 법률, 전기통신사업법 등 관계법령 및 회사가 정한 서비스의 세부이용지침 등의 규정에 따릅니다.</p>
 
-				<br>
-	            <h4>제 6 조 (회원정보의 변경)</h4>
-	            <p>“회원”은 회원가입신청 시 기재한 사항이 변경되었을 경우 “서비스” 마이페이지화면을 통하여 수정하여야 합니다. “회원”이 변경사항을 수정하지 아니하여 발생한 불이익에 대하여 “회사”는 책임지지 않습니다.</p>
+				<b><p>제5조 (이용계약의 성립)</p></b>
+				<p>① 서비스 이용계약은 회사가 정한 가입 양식에 따라 회원정보(전자우편주소, 비밀번호, 별명 등)를 기입하여 회원가입신청을 하고 회사가 이러한 신청에 대하여 승인함으로써 체결됩니다.</p>
+				<p>② 전문가 전환의 경우에는 인테리어 관련 서비스나 제품을 판매하는 직종에 종사하는 회원이 회사가 정한 절차에 따라 정보를 기입하여 전문가 전환 신청을 하고 회사가 해당 전문가 전환 신청을 승인하면 전문가로서 서비스를 이용할 수 있습니다.</p>
+				<p>③ 가입신청자가 회원정보를 제출하는 것은 회원가입 화면에 노출되어 있는 본 약관 및 개인정보처리방침의 내용을 숙지하고, 회사가 서비스 이용을 위해 운영하는 각종 정책(저작권 정책, 운영 방침 등)과 수시로 공지하는 사항을 준수하는 것에 대해 동의하는 것으로 봅니다.</p>
 
-	 			<br>
-	            <h4>제 7 조 (개인정보보호 의무)</h4>
-	            <p>1. "회사"는 "정보통신망법" 등 관계 법령이 정하는 바에 따라 "회원"의 개인정보를 보호하기 위해 노력합니다. 개인정보의 보호 및 사용에 대해서는 관련 법령 및 "회사"의 개인정보처리방침이 적용됩니다. 다만, "회사"의 공식 사이트 이외의 링크된 사이트에서는 "회사"의 개인정보처리방침이 적용되지 않습니다.</p>
-	            <p>2. “회사”가 개인정보의 보호를 위하여 상당한 주의를 기울였음에도 불구하고, “호스트회원”이 관련 법령 및 "호스트 이용약관”을 위반하여 “회원”의 개인정보를 유출 또는 유용한 경우 “회사”는 그에 대하여 아무런 책임을 부담하지 않습니다.</p>
+				<b><p>제6조 (이용신청에 대한 승낙 및 제한)</p></b>
+				<p>① 회사는 서비스의 이용을 신청한 가입신청자에 대하여 업무상ㆍ기술상 지장이 없는 한 접수순서에 따라 서비스의 이용을 승낙합니다.</p>
+				<p>② 타인의 개인정보를 도용하는 등 부정한 목적 또는 방법으로 이용신청을 한 회원의 ID는 사전 통지 없이 이용 계약이 해지될 수 있으며, 당해 회원은 관계법령에 따라 처벌을 받을 수 있습니다.</p>
+				<p>③ 회사는 다음 각 호에 해당하는 이용신청에 대하여는 승낙을 하지 않을 수 있습니다.</p>
+				<p>1. 기술상 서비스 제공이 불가능한 경우</p>
+				<p>2. 신청양식의 기재사항을 누락하거나 오기하여 신청하는 경우</p>
+				<p>3. 사회의 안녕질서 또는 미풍양속을 저해하거나 저해할 목적으로 신청한 경우
+				<p>4. 회원의 귀책사유에 의하여 회원자격을 상실한 적이 있는 경우. 다만, 자격상실 이후 6개월 이상 경과한 자로 회사의 회원 재가입 승낙을 받은 경우는 예외로 합니다.</p>
+				<p>5. 기타 회사가 정한 이용요건에 충족되지 않았을 경우</p>
+				<p>④ 회사는 서비스를 이용하는 회원에 대하여 회원의 종류 및 등급별로 구분하여 이용시간, 이용회수, 서비스 메뉴 등을 세분하여 이용에 차등을 둘 수 있습니다.</p>
+				<p>⑤ 회사는 전문가 전환을 신청한 회원에 대하여 회사의 업무상ㆍ기술상 또는 서비스 운영정책상 전문가 전환 신청을 승낙하지 않을 수 있습니다.</p>
+
+				<b><p>제7조 (회원정보의 변경)</p></b>
+				<p>① 회원은 서비스를 통하여 언제든지 본인의 개인정보를 열람하고 수정할 수 있습니다.</p>
+				<p>② 회원은 서비스를 이용하면서 회사에 제출한 회원정보가 변경되었을 경우 개인정보 설정 화면에서 회원정보를 수정하거나 고객센터를 통하여 회사에 변경 사항을 통지하여야 합니다.</p>
+				<p>③ 회원정보를 수정하지 않음으로 인하여 발생하는 모든 책임은 회원에게 있습니다.</p>
+				<p>④ 전문가가 회사에 제출한 전문가 정보를 변경했을 경우, 회사가 실시하는 변경된 정보에 대해 검수를 통과해야만 변경된 정보가 서비스에 반영됩니다.</p>
+
+				<b><p>제8조 (서비스의 이용)</p></b>
+				<p>① 회사는 회원의 이용신청을 승낙한 때부터 서비스를 개시합니다.</p>
+				<p>② 회사의 업무상ㆍ기술상의 장애로 인하여 서비스를 개시하지 못하는 경우에는 서비스에 공지하거나 회원에게 이를 통지합니다.</p>
+				<p>③ 서비스의 이용은 연중무휴 1일 24시간을 원칙으로 합니다. 다만, 회사의 업무상ㆍ기술상 또는 서비스 운영정책상 서비스가 일시 중지될 수 있습니다. 이러한 경우 회사는 사전 또는 사후에 이를 공지합니다.</p>
+				<p>④ 회사는 서비스를 일정범위로 분할하여 각 범위 별로 이용 가능한 시간을 별도로 정할 수 있으며 이 경우 그 내용을 공지합니다.</p>
+				<p>⑤ 회사는 서비스 내의 개별서비스에 대한 별도의 약관을 둘 수 있으며, 개별서비스에서 별도로 적용되는 약관에 대한 동의는 회원이 개별서비스를 최초로 이용할 경우 별도의 동의절차를 거치게 됩니다.</p>
 
        			<br>
        			<div class="col-md-2 col-md-offset-5">
@@ -203,120 +87,7 @@
     </div><!--/container-->
     <!--=== End Content Part ===-->
 
-     <!--===========================
-
-  	   Footer 하단시작이요오
-
-    =============================-->
-    <div id="footer-v2" class="footer-v2">
-        <div class="footer">
-            <div class="container">
-                <div class="row">
-                    <!-- About -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <a class="logo" href="${pageContext.request.contextPath}/main.do">
-                		<img src="${pageContext.request.contextPath}/assets/logoimg/MainLogo.png" alt="Logo" width="180">
-            			</a>
-                        <p class="margin-bottom-20"><p>Study from Anywhere!<br> 원하는 곳에서 스터디 하세요.<br>
-                        	GatherStudy는 통신판매중개자이며 통신판매의 당사자가 아닙니다. 따라서 GatherStudy는 공간 거래정보 및 거래에 대해 책임지지 않습니다.</p>
-                    </div>
-                    <!-- End About -->
-
-                    <!-- Link List -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2 class="heading-sm">Useful Links</h2></div>
-                        <ul class="list-unstyled link-list">
-                            <li><a href="${pageContext.request.contextPath}/main.do">HOME</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="${pageContext.request.contextPath}/notice/list.do">공지 사항</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="${pageContext.request.contextPath}/cafe/list.do">카페 구경하기</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="${pageContext.request.contextPath}/findMember/list.do">멤버 구하기</a><i class="fa fa-angle-right"></i></li>
-                            <li><a href="${pageContext.request.contextPath}/help/list.do">도움말</a><i class="fa fa-angle-right"></i></li>
-                        </ul>
-                    </div>
-                    <!-- End Link List -->
-
-                    <!-- Blog Tweets -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="latest-tweets">
-                            <div class="headline"><h2 class="heading-sm">Latest Tweets</h2></div>
-                            <div class="latest-tweets-inner">
-                                <i class="fa fa-twitter"></i>
-                                <p>
-                                    <a href="#">@htmlstream</a>
-                                    예약이 간편해서 좋았습니다.
-                                    <a href="#">http://t.co/sBav7dm</a>
-                                    <small class="twitter-time">2 hours ago</small>
-                                </p>
-                            </div>
-                            <div class="latest-tweets-inner">
-                                <i class="fa fa-twitter"></i>
-                                <p>
-                                    <a href="#">@user</a>
-                                    후기가 좋았고 스터디원을 구하기 편했습니다.
-                                    <a href="#">http://t.co/sBav7dm</a>
-                                    <small class="twitter-time">4 hours ago</small>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Latest Tweets -->
-
-                    <!-- Address -->
-                    <div class="col-md-3 md-margin-bottom-40">
-                        <div class="headline"><h2 class="heading-sm">Contact Us</h2></div>
-                        <address class="md-margin-bottom-40">
-                            <i class="fa fa-home"></i>서울특별시 강남구 테헤란로11 세경빌딩 3층 <br />
-                            <i class="fa fa-phone"></i>Phone: 010 1234 5678 <br />
-                            <i class="fa fa-globe"></i>Website: <a href="#">www.GatherStudy.com</a> <br />
-                            <i class="fa fa-envelope"></i>Email: <a href="GatherStudy@naver.com">GatherStudy@naver.com</a>
-                        </address>
-                    </div>
-                    <!-- End Address -->
-                </div>
-            </div>
-        </div><!--/footer-->
-
-        <div class="copyright">
-            <div class="container">
-                <p class="text-center">2015 &copy; All Rights Reserved. Unify Theme by <a target="_blank" href="https://twitter.com/htmlstream">Htmlstream</a></p>
-            </div>
-        </div><!--/copyright-->
-    </div>
-    <!--=======================
-
-     				Footer 하단끝끝
-
-	========================-->
-    </div>
-
-<!-- JS Global Compulsory -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/jquery/jquery-migrate.min.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<!-- JS Implementing Plugins -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/back-to-top.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/smoothScroll.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/parallax-slider/js/modernizr.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/parallax-slider/js/jquery.cslider.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
-<!-- JS Customization -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/custom.js"></script>
-<!-- JS Page Level -->
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/app.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/plugins/owl-carousel.js"></script>
-<script type="text/javascript" src="${pageContext.request.contextPath}/assets/js/plugins/parallax-slider.js"></script>
-<script type="text/javascript">
-    jQuery(document).ready(function() {
-      	App.init();
-        OwlCarousel.initOwlCarousel();
-        ParallaxSlider.initParallaxSlider();
-    });
-</script>
-<!--[if lt IE 9]>
-    <script src="assets/plugins/respond.js"></script>
-    <script src="assets/plugins/html5shiv.js"></script>
-    <script src="assets/plugins/placeholder-IE-fixes.js"></script>
-<![endif]-->
-
 </body>
-</html>
+
+	<!-- FOOTER -->
+	<%@include file ="/View/Common/footer.jsp" %>
