@@ -26,15 +26,13 @@ public class MemberController{
 
 	private Log log = LogFactory.getLog(getClass());
 	private final MembersDAO membersDAO;
-	private final ReservationDAO reservationDAO;
-	private final EvaluationDAO evaluationDAO;
+
 
 	@Autowired
 	public MemberController(MembersDAO membersDAO, ReservationDAO reservationDAO, EvaluationDAO evaluationDAO) {
 		super();
 		this.membersDAO = membersDAO;
-		this.reservationDAO = reservationDAO;
-		this.evaluationDAO = evaluationDAO;
+
 	}
 
 	// By Jay_회원가입 폼 호출 하기_20210405
@@ -179,68 +177,9 @@ public class MemberController{
 	    return result;
 	   }
 
-	// By Jay_관리자 로그인창 호출 하기_20210503
-	@RequestMapping(value="user/adminLogin.do", method = RequestMethod.GET)
-	public String adminLoginForm() {
-		log.info("MemberController의 adminLoginform()호출됨");
-		return "user/admin_login";
-	}
-
-	// By Jay_관리자 로그인 하기_20210503
-	@RequestMapping(value="user/adminLogin.do", method = RequestMethod.POST)
-	@ResponseBody
-	public String adminLogin (@ModelAttribute AdminDTO admins, HttpSession session) {
-		log.info("MemberController의 adminLogin()호출됨");
-
-		String result = null;
-		AdminDTO userIdCheck = membersDAO.adminGetOne(admins);
-		log.info(userIdCheck);
-		if(userIdCheck == null) {
-			result= "idFail";
-			return result;
-		}
-
-		if(admins.getAdmin_pwd().equals(userIdCheck.getAdmin_pwd())) {
-			session.setAttribute("loginAdmin", userIdCheck);
-			result = "success";
-
-		} else {
-			result = "pwdFail";
-		}
-		return result;
-	}
-
-	// By Jay_회원 당 예약내역 불러오기_20210430
-	@RequestMapping(value="/user/mypage_reservation.do", method = RequestMethod.GET)
-	public String resForm(@RequestParam String member_id, Model model) {
-	   log.info("MemberController의 reservationList()호출됨");
-
-	   reservationDAO.orderUsed();
-	   List<MemberOrderListDTO> OrderList=reservationDAO.getMemberOrders(member_id);
-	   int count = reservationDAO.getOrderNum(member_id);
-	   model.addAttribute("OrderList", OrderList);
-	   model.addAttribute("count", count);
-
-	   return "user/mypage_reservation";
-	 }
-
-	// By Jay_회원 당 예약 내역 취소하기_20210430
-	@RequestMapping(value="/user/mypage_reservationCancel.do", method = RequestMethod.GET)
-	public String orderCancel(@RequestParam String member_id, @RequestParam String reser_number, Model model) {
-	   log.info("MemberController의 orderCancel()호출됨");
-	   reservationDAO.orderCancel(reser_number);
-
-	   reservationDAO.orderUsed();
-	   List<MemberOrderListDTO> OrderList=reservationDAO.getMemberOrders(member_id);
-	   int count = reservationDAO.getOrderNum(member_id);
-	   model.addAttribute("OrderList", OrderList);
-	   model.addAttribute("count", count);
-
-	   return "user/mypage_reservation";
-	 }
 
 	// By Jay_회원 당 구매후기 관련 리스트로 이동_20210430
-	@RequestMapping(value="user/mypage_evaluation.do", method = RequestMethod.GET)
+/*	@RequestMapping(value="user/mypage_evaluation.do", method = RequestMethod.GET)
 	public String orderEvaluationList(@RequestParam String member_id, Model model) {
 	   log.info("MemberController의 orderEvaluationList()호출됨");
 	   List<MemberOrderListDTO> OrderList = reservationDAO.orderEvaluationList(member_id);
@@ -275,7 +214,7 @@ public class MemberController{
 	   evaluationDAO.evaluationCheckChange(evaluationDTO.getReser_number());
 
 	   return "success";
-	 }
+	 }*/
 
 }
 
