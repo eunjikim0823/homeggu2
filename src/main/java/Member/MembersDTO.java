@@ -63,7 +63,7 @@ public class MembersDTO {
 
 	// 모든 DTO에 static 정적메서드를 작성 -> 적용((,),>,<을 입력받지 못하게 코딩)
 	// 이 메서드는 현재 있는 클래스에서만 사용이 가능하도록 설정
-	/*private static String convert(String name) {
+	private static String convert(String name) {
 		 if(name!=null){
 	    	   //문자열메서드->replaceAll(1.변경전문자열,2.변경후문자열)
 	    	   name=name.replaceAll("<","&lt");
@@ -79,5 +79,5 @@ public class MembersDTO {
 	    	   return null;//입력을 하지 않았따면 더 이상 실행X
 	       }
 		 return name;
-	}*/
+	}
 }

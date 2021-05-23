@@ -18,6 +18,6 @@ public interface MembersDAO{
 	public void deleteMember(MembersDTO members);
 
 	// 6. 관리자 계정으로 아이디, 비밀번호 값 갖고오기(로그인시 아이디, 비밀번호 확인)
-	public AdminDTO adminGetOne(AdminDTO admins);
+	/* public AdminDTO adminGetOne(AdminDTO admins); */
 }
 

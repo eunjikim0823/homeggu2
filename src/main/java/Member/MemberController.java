@@ -19,15 +19,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.evaluation.dao.EvaluationDAO;
-import com.evaluation.domain.EvaluationDTO;
-import com.evaluation.domain.EvaluationReplyDTO;
-import com.evaluation.domain.TotalEvaluationDTO;
-import com.members.dao.MembersDAO;
-import com.members.domain.AdminDTO;
-import com.members.domain.MembersDTO;
-import com.reservation.dao.ReservationDAO;
-import com.reservation.domain.MemberOrderListDTO;
+
 
 @Controller
 public class MemberController{
