@@ -10,12 +10,7 @@
 	<title>회원가입</title>
 
 	<body>
-	   <!-- 상단 -->
-	        <div id="heaer">
-	       <a href="homgg">  <img src="${pageContext.request.contextPath}/picture/home.png" id="logo"> </a>
-	       <br>
-	        <div id="header2"><h4>홈꾸 회원가입</h4></div>
-	        </div>
+
 
 	 <form method="post" action="/user/register.do" id="registerform" >
 	<!--=== Content Part ===-->
@@ -72,7 +67,7 @@
 
 	        <!-- 주소 -->
 	        <div class="input-group margin-bottom-30">
-	            <span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
+	            <span class="input-group-addon"><i class="fa fa-address-book"></i></span>
 	            <input type="text" id="member_address" name="member_address" class="form-control" placeholder="주소 ex)서울시 강남구">
 	        </div>
 	        <hr>

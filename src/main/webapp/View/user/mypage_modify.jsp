@@ -50,7 +50,7 @@
                           </div>
 
                           <div>
-                              <i class="fa fa-phone-square">&ensp;</i><b>주소</b>
+                              <i class="fa fa-address-book">&ensp;</i><b>주소</b>
                               <input type="text" id="member_address" name="member_address" class="form-control" placeholder="주소 ex)서울시 강남구" value="${member.member_address}">
                           	<input type="hidden" id="member_id" name="member_id" value="${sessionScope.loginUser.member_id}">
                           </div>

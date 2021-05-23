@@ -44,7 +44,7 @@
                                     <p>
                                     <hr>
                                     <div>
-                                        <i class="fa fa-phone-square">&ensp;</i><b>주소</b> : ${member.member_address}
+                                        <i class="fa fa-address-book">&ensp;</i><b>주소</b> : ${member.member_address}
                                     </div>
                                     <p>
                                     <hr>
