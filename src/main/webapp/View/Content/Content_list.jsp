@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-    <link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet">
 <%@ page import="java.util.*,content.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<link href="${pageContext.request.contextPath}/css/Contents.css" rel="stylesheet">
+
 
 	 <!-- HEADER -->
 	 <%@include file ="/View/Common/header.jsp" %>
@@ -14,7 +14,7 @@
 
 			<!-- 최신순 조회내역 /컨텐츠 리스트 default  -->
 			<%
-			ArrayList clist = (ArrayList) request.getAttribute("Content_list");//${list}
+			ArrayList clist = (ArrayList) request.getAttribute("Content/Content_list");//${list}
 					if (clist != null) {//데이터가 존재한다면
 						Iterator iter = clist.iterator();
 						while (iter.hasNext()) {//꺼낼 데이터가 존재한다면
@@ -51,7 +51,7 @@
 							    	&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;
 							    </div><!-- text -->
 
-								<a href="Content_watch.do?num=<%=num%>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
+								<a href="/Content/Content_watch.do?num=<%=num%>"> <!-- 사진이랑 제목 눌러야지만 링크 이동 -->
 						         <div class="thumbnail">
 						            <img src="picture/upload/<%=fileName%>"  class=" img-rounded img-responsive"
 						            	style="object-fit: cover;">

@@ -30,7 +30,7 @@ public class ContentListActionController {
 
 	// public void test() {}
 
-	@RequestMapping("/View/Content/Content_list.do")
+	@RequestMapping("/Content/Content_list.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
 		System.out.println("ListActionController의 handleRequest()호출됨");
@@ -51,8 +51,8 @@ public class ContentListActionController {
 		System.out.println("ListActionController의 list=>"+clist);
 		//화면에 출력할 list.jsp에 전달할 페이지와 전달할값을 설정
 		ModelAndView mav=new ModelAndView();
-		mav.setViewName("Content_list");//이동할 파일명만
-		mav.addObject("Content_list",clist);//request.setAttribute("list",list);
+		mav.setViewName("Content/Content_list");//이동할 파일명만
+		mav.addObject("Content/Content_list",clist);//request.setAttribute("list",list);
 		// mav.addObject("list2", list2);
 		mav.addObject("pagination", pagination);
 		//${list(키명)}

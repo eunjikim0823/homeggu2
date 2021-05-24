@@ -25,7 +25,7 @@
       class="org.springframework.web.servlet.view.InternalResourceViewResolver">
      <property name="viewClass"
                    value="org.springframework.web.servlet.view.JstlView" />
-     <property name="prefix" value="/" />
+     <property name="prefix" value="/View/" />
      <property name="suffix" value=".jsp"></property>
  </bean>
 
@@ -64,16 +64,16 @@
 
  <!-- 3.글쓰기(글수정하기와 거의유사) -->
 
- <bean name="/Content_write.do" class="content.WriteActionController" />
+ <bean name="/Content/Content_write.do" class="content.WriteActionController" />
  <bean name="/write.do" class="lee.WriteActionController" />
 
 <!-- 4. 글상세보기 -->
 
 <bean name="/Content/Content_watch.do" class="content.WatchActionController" />
 
- <bean name="/Content_retrieve.do" class="content.RetrieveActionController" />
+ <bean name="/Content/Content_retrieve.do" class="content.RetrieveActionController" />
 
- <bean name="/retrieve.do" class="lee.RetrieveActionController" />
+ <bean name="/Board/retrieve.do" class="lee.RetrieveActionController" />
 
 <!-- 5.글수정하기 -->
  <bean name="/Content_update.do" class="content.UpdateActionController" />

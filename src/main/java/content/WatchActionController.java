@@ -35,8 +35,8 @@ public class WatchActionController{
 		dao.updateReadcnt(num);//readcnt=readcnt+1
 		BoardCommand data=dao.watch(num);
 		//--------------------------------------------
-		ModelAndView mav=new ModelAndView("Content_watch");
-		mav.addObject("Content_watch",data);//request.setAttribute("list",list);
+		ModelAndView mav=new ModelAndView("/Content/Content_watch");
+		mav.addObject("/Content/Content_watch",data);//request.setAttribute("list",list);
 		//${data(키명)}
 		return mav;//return "/list.jsp"; //viewResolver가 알려줌
 	}
