@@ -30,7 +30,7 @@ public class ListActionController {
 
 	// public void test() {}
 
-	@RequestMapping("/View/Content/Content_list.do")
+	@RequestMapping("/Content_list.do")
 	public ModelAndView handleRequest(HttpServletRequest request,
 			                                                  HttpServletResponse response) throws Exception {
 		System.out.println("ListActionController의 handleRequest()호출됨");
